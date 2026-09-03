@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "ports": {"preview": 3000, "additional": {}},
+  "scripts": {
+    "setup": {"enabled": true, "command": "pip3 install --break-system-packages -r requirements.txt"},
+    "run": {"enabled": true, "command": "streamlit run app.py --server.headless true --server.port 3000"},
+    "archive": {"enabled": true, "command": null},
+    "check": {"enabled": true, "command": null}
+  },
+  "mcpServers": []
+}
