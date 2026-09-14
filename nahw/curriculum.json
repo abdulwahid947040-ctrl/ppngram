@@ -1,0 +1,987 @@
+{
+  "meta": {
+    "name_ar": "منهاج التركيب المُتدرِّج",
+    "name_en": "Graded tarkeeb curriculum",
+    "version": "1.1.0",
+    "purpose_en": "A step-by-step ladder: the student starts from the smallest possible sentence and sees exactly what is added at each step (verb+doer, jar+majrur, zarf, maf'ul bih, mudhaf/mudhaf ilaih, mausuf/sifah, tawabi', nawasikh, amr/nahy/istifham/tamanni, maf'ul family, tamyiz/hal, i'rab signs, shart/nida/istithna) until the sentence is fully grown. Levels map to the seven babs of the Ajurrumiyyah (ed. an-Nubahan): باب الكلام، الإعراب، علامات الإعراب، الأفعال، مرفوعات الأسماء، منصوبات الأسماء، مخفوضات الأسماء.",
+    "how_to_study_ar": [
+      "١) اقرأ فكرة المستوى وما أُضيف للجملة (grows_by).",
+      "٢) احفظ العوامل في هذا المستوى (awamil) وعلاماتها.",
+      "٣) فرِّك جمل المستوى كلمةً كلمةً (sentence_ids ثم inline_examples).",
+      "٤) ركِّب جملك المماثلة وجرِّبها: python3 nahw/tarkeeb.py parse \"...\"",
+      "٥) أضف جملك الجديدة إلى sentences.json وlexicon.json — هكذا يثري الطالب البيانات وقتًا بعد وقت."
+    ],
+    "sentence_ref_en": "sentence_ids point to nahw/sentences.json (parser-verified). inline_examples use the same word-record format but are marked \"parser\": false until they are added to the corpus and lexicon."
+  },
+  "growth_map": [
+    {
+      "level": "L01",
+      "example_ar": "العلمُ نورٌ",
+      "words": 2,
+      "awamil": 0,
+      "awamil_ar": []
+    },
+    {
+      "level": "L02",
+      "example_ar": "نجحَ الطالبُ",
+      "words": 2,
+      "awamil": 1,
+      "awamil_ar": [
+        "الفعل"
+      ]
+    },
+    {
+      "level": "L03",
+      "example_ar": "الطالبُ في المسجدِ",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "حرف الجر"
+      ]
+    },
+    {
+      "level": "L04",
+      "example_ar": "الجوُّ جميلٌ اليومَ",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "الظرف + المضاف فيه"
+      ]
+    },
+    {
+      "level": "L05",
+      "example_ar": "الطالبُ يقرأُ الكتابَ",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "الفعل المتعدي"
+      ]
+    },
+    {
+      "level": "L06",
+      "example_ar": "قرأَ الطالبُ كتابَ اللهِ",
+      "words": 4,
+      "awamil": 2,
+      "awamil_ar": [
+        "الفعل المتعدي",
+        "المضاف"
+      ]
+    },
+    {
+      "level": "L07",
+      "example_ar": "العلمُ نورٌ نافعٌ",
+      "words": 3,
+      "awamil": 0,
+      "awamil_ar": [
+        "(النعت تابعٌ لا عامل)"
+      ]
+    },
+    {
+      "level": "L08",
+      "example_ar": "جاءَ زيدٌ وعمرٌو",
+      "words": 4,
+      "awamil": 1,
+      "awamil_ar": [
+        "الفعل"
+      ]
+    },
+    {
+      "level": "L09",
+      "example_ar": "كان الطالبُ مجتهدًا",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "كان (تعمل في اسمين)"
+      ]
+    },
+    {
+      "level": "L10",
+      "example_ar": "لا تُهملْ دروسَكَ",
+      "words": 3,
+      "awamil": 2,
+      "awamil_ar": [
+        "لا الناهية",
+        "الفعل"
+      ]
+    },
+    {
+      "level": "L11",
+      "example_ar": "اجتهدْ طلبًا للتفوقِ",
+      "words": 4,
+      "awamil": 2,
+      "awamil_ar": [
+        "الفعل",
+        "حرف الجر"
+      ]
+    },
+    {
+      "level": "L12",
+      "example_ar": "اشتريتُ عشرينَ كتابًا",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "الفعل + العدد (يستلزم التمييز)"
+      ]
+    },
+    {
+      "level": "L13",
+      "example_ar": "الطلابُ يكتبونَ الدرسَ",
+      "words": 3,
+      "awamil": 1,
+      "awamil_ar": [
+        "الفعل (يعمل في الواو والمفعول)"
+      ]
+    },
+    {
+      "level": "L14",
+      "example_ar": "إذا جاءَ المسلمُ فأكرمْهُ",
+      "words": 5,
+      "awamil": 3,
+      "awamil_ar": [
+        "أداة الشرط",
+        "الفعل (جاء)",
+        "الفعل (أكرم)"
+      ]
+    },
+    {
+      "level": "L15",
+      "example_ar": "الطالبُ المجتهدُ يقرأُ كتابَ العلمِ في المسجدِ كلَّ يومٍ",
+      "words": 9,
+      "awamil": 4,
+      "awamil_ar": [
+        "الفعل المتعدي",
+        "المضاف",
+        "المضاف",
+        "حرف الجر"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": "L01",
+      "order": 1,
+      "title_ar": "أصغر جملة: مبتدأ + خبر مفرد",
+      "title_en": "Smallest sentence: mubtada + single-word khabar",
+      "ajurrumiyyah_bab_ar": "باب الكلام (والإعراب: المرفوع المبتدأ والخبر)",
+      "idea_ar": "أصغر كلام مفيد: كلمتان مرفوعتان — الأولى مبتدأ والثانية خبر، والجملة الاسمية في محل رفع.",
+      "idea_en": "Two words make a complete sentence: subject + predicate, both nominative. Nothing smaller is a sentence.",
+      "grows_by_ar": "— (نقطة البداية)",
+      "awamil": [
+        {
+          "ar": "لا عامل لفظيًّا",
+          "works_on_ar": "المبتدأ والخبر معروضان بلا عامل ظاهر",
+          "count": 0
+        }
+      ],
+      "sentence_ids": [],
+      "inline_examples": [
+        {
+          "text_ar": "العلمُ نورٌ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "العلمُ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "mubtada",
+              "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة"
+            },
+            {
+              "i": 2,
+              "surface_ar": "نورٌ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "khabar",
+              "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«العلمُ» مبتدأ مرفوع، و«نورٌ» خبر مرفوع، والجملة اسمية خبرية."
+        }
+      ],
+      "practice_ar": [
+        "ركِّب خمس جمل من كلمتين: مبتدأ وخبر مفرد.",
+        "بيّن علامة الرفع في كل كلمة (ضمة، تنوين ضم، واو، ألف)."
+      ],
+      "awamil_ids": []
+    },
+    {
+      "id": "L02",
+      "order": 2,
+      "title_ar": "أصغر جملة فعلية: فعل + فاعل",
+      "title_en": "Smallest verbal sentence: verb + doer",
+      "ajurrumiyyah_bab_ar": "باب الأفعال + باب مرفوعات الأسماء (الفاعل)",
+      "idea_ar": "الفعل أول العوامل: يعمل رفعًا في الفاعل. إن كان الفعل لازمًا اكتفى بفاعله، وقد يكون الفاعل ظاهرًا أو ضميرًا متصلًا أو مستترًا.",
+      "idea_en": "The verb is the first 'aamil (governor): it raises its doer — visible, attached pronoun, or hidden.",
+      "grows_by_ar": "أضفنا عاملًا لفظيًّا: الفعل.",
+      "awamil": [
+        {
+          "ar": "الفعل اللازم",
+          "works_on_ar": "الفاعل (مرفوع)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S021"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "صغ ثلاث جمل بفعل ماضٍ لازم وفاعل ظاهر.",
+        "صغ جملة يكون فاعلها ضميرًا متصلًا نحو «كتبتُ» وجملة بفاعل مستتر."
+      ],
+      "awamil_ids": [
+        "fil_lazim"
+      ]
+    },
+    {
+      "id": "L03",
+      "order": 3,
+      "title_ar": "النمو بشبه الجملة: الجار والمجرور",
+      "title_en": "Growth by quasi-sentence: preposition + majrur",
+      "ajurrumiyyah_bab_ar": "باب مخفوضات الأسماء (المخفوض بالحرف)",
+      "idea_ar": "حرف الجر عامل: يجر الاسم بعده، والجار والمجرور شبه جملة متعلقة بعامل (فعل أو خبر محذوف).",
+      "idea_en": "A preposition governs (yajarr) the noun after it; the phrase attaches to a verb or an implied khabar.",
+      "grows_by_ar": "أضفنا حرف جر + اسم مجرور في آخر الجملة.",
+      "awamil": [
+        {
+          "ar": "حرف الجر",
+          "works_on_ar": "الاسم المجرور (مجرور بالكسرة)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S023",
+        "S005",
+        "S006"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "أضف «في/إلى/عن/على» إلى جملتك من L01 وL02.",
+        "احفظ حروف الجر التسعة: من، إلى، عن، على، في، الباء، الكاف، اللام، ربّ."
+      ],
+      "awamil_ids": [
+        "harf_jarr"
+      ]
+    },
+    {
+      "id": "L04",
+      "order": 4,
+      "title_ar": "النمو بالظرف (مفعول فيه)",
+      "title_en": "Growth by the adverb (maf'ul fih)",
+      "ajurrumiyyah_bab_ar": "باب المنصوبات (المفعول فيه: ظرف زمان ومكان)",
+      "idea_ar": "الظرف اسم منصوب يبيّن زمان الفعل أو مكانه، وقد يُضاف فيأخذ مضافًا إليه، ويتعلق بخبر محذوف إذا لم يسبقه فعل.",
+      "idea_en": "The adverb is an accusative noun showing time/place; it may take a mudhaf ilaihi and attach to an implied khabar.",
+      "grows_by_ar": "أضفنا ظرفًا (اليومَ / تحتَ الشجرةِ) في محل نصب.",
+      "awamil": [
+        {
+          "ar": "الظرف المضاف (نحو «تحتَ»)",
+          "works_on_ar": "المضاف إليه (مجرور)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S020",
+        "S028"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "صغ جملة بظرف زمان وأخرى بظرف مكان.",
+        "فرِّك «الطالبُ تحتَ الشجرةِ» وكأن الخبر محذوف تقديره «جالسٌ»."
+      ],
+      "awamil_ids": [
+        "zarfiyya"
+      ]
+    },
+    {
+      "id": "L05",
+      "order": 5,
+      "title_ar": "النمو بالمفعول به: الفعل المتعدي، والمبني للمجهول",
+      "title_en": "Growth by the direct object; the passive verb",
+      "ajurrumiyyah_bab_ar": "باب الأفعال (المتعدية والمبني للمجهول) + باب المنصوبات (المفعول به)",
+      "idea_ar": "الفعل المتعدي ينصب مفعولًا به بعد فاعله؛ وإذا حُذف الفاعل للجهالة نُوب عنه بمفعوله فصار نائب فاعل مرفوعًا.",
+      "idea_en": "A transitive verb takes an accusative object; passivize it and the object becomes the naa'ib faa'il (deputy doer, nominative).",
+      "grows_by_ar": "أضفنا مفعولًا به منصوبًا، ثم بنينا الفعل للمجهول فناب المفعول عن الفاعل.",
+      "awamil": [
+        {
+          "ar": "الفعل المتعدي",
+          "works_on_ar": "الفاعل (مرفوع) والمفعول به (منصوب)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S001",
+        "S012",
+        "S032"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "حوِّل «قرأَ الطالبُ الكتابَ» إلى المجهول، ثم فرِّكها.",
+        "عدّ أثر الفعل في كل كلمة من جملتك."
+      ],
+      "awamil_ids": [
+        "fil_mutaadi",
+        "fil_majhul"
+      ]
+    },
+    {
+      "id": "L06",
+      "order": 6,
+      "title_ar": "الإضافة: مضاف + مضاف إليه",
+      "title_en": "Annexation: mudhaf + mudhaf ilaihi",
+      "ajurrumiyyah_bab_ar": "باب مخفوضات الأسماء (المخفوض بالإضافة)",
+      "idea_ar": "المضاف يعمل جرًّا في مضاف إليه؛ فتُزاد كلمة وتُجرّ بالكسرة أو ما ينوب عنها (فتحة للممنوع من الصرف، وياء للمثنى والجمع السالم).",
+      "idea_en": "The annexed noun governs a genitive; the mudhaf ilaihi takes kasra (fatha for diptotes, ya for dual/sound plural).",
+      "grows_by_ar": "أضفنا مضافًا إليه — فصار للجملة عامل معنوي جديد (المضاف).",
+      "awamil": [
+        {
+          "ar": "المضاف",
+          "works_on_ar": "المضاف إليه (مجرور)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S002",
+        "S024",
+        "S019"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "أضف مضافًا إليه إلى كل جملة عندك من المستويات السابقة.",
+        "لاحظ: كيف عُلّمت «اللهِ» بالفتحة؟ (ممنوع من الصرف)"
+      ],
+      "awamil_ids": [
+        "idafa"
+      ]
+    },
+    {
+      "id": "L07",
+      "order": 7,
+      "title_ar": "الوصف: موصوف + صفة (النعت)",
+      "title_en": "Description: mausuf + sifah (adjective)",
+      "ajurrumiyyah_bab_ar": "التوابع في آخر باب مرفوعات الأسماء (النعت)",
+      "idea_ar": "النعت تابع لا عامل: يتبع متبوعه في الإعراب والتعريف والتنكير والتذكير والتأنيث — فيكبر الوصف الجملة بلا عامل جديد.",
+      "idea_en": "The adjective is a tabi' (follower), not an 'aamil: it copies its noun's case, gender, number and definiteness.",
+      "grows_by_ar": "أضفنا نعتًا بعد المبتدأ أو الخبر أو المفعول به — بلا عامل جديد.",
+      "awamil": [
+        {
+          "ar": "لا عامل — النعت تابع",
+          "works_on_ar": "يتبع المتبوع في كل شيء",
+          "count": 0
+        }
+      ],
+      "sentence_ids": [
+        "S022",
+        "S007",
+        "S014"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "أضف نعتًا لكل اسم في جملة S029.",
+        "ذكّر وأنّث النعت ولاحظ تغيّر العلامة."
+      ],
+      "awamil_ids": []
+    },
+    {
+      "id": "L08",
+      "order": 8,
+      "title_ar": "بقية التوابع: العطف والبدل والتوكيد",
+      "title_en": "Other followers: atf, badal, tawkid",
+      "ajurrumiyyah_bab_ar": "التوابع (العطف، البدل، التوكيد)",
+      "idea_ar": "حرف العطف يربط تابعًا يُعرب إعراب المتبوع؛ والبدل يُقصد بالحكم؛ والتوكيد يقرّر الثبوت (نفسه، كله، إنّ، كل).",
+      "idea_en": "Conjunctions attach a follower with the same i'rab; badal substitutes; tawkid re-affirms (nafsu-hu, kullu-hu...).",
+      "grows_by_ar": "أضفنا معطوفًا بحرف عطف — يتبع المتبوع في المحل والعلامة.",
+      "awamil": [
+        {
+          "ar": "حرف العطف",
+          "works_on_ar": "يربط ولا يُعرب؛ المعطوف تابع",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S008"
+      ],
+      "inline_examples": [
+        {
+          "text_ar": "حضرَ أخوك زيدٌ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "حضرَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "أخوك",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "fail",
+              "irab_ar": "فاعل مرفوع وعلامة رفعه ثبوت الواو لأنه من الأسماء الخمسة، وهو مضاف والكاف ضمير متصل مبني في محل جر مضاف إليه"
+            },
+            {
+              "i": 3,
+              "surface_ar": "زيدٌ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "badal",
+              "irab_ar": "بدل مطابق من «أخوك» مرفوع وعلامة رفعه الضمة الظاهرة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«حضرَ» فعل ماضٍ، و«أخوك» فاعل مرفوع بثبوت الواو (من الأسماء الخمسة)، و«زيدٌ» بدل مطابق مرفوع."
+        },
+        {
+          "text_ar": "جاءَ الأميرُ نفسُهُ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "جاءَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "الأميرُ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "fail",
+              "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة"
+            },
+            {
+              "i": 3,
+              "surface_ar": "نفسُهُ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "tawkid",
+              "irab_ar": "توكيد معنوي مرفوع تابع للفاعل، والهاء ضمير متصل مبني في محل جر مضاف إليه"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«جاءَ» فعل ماضٍ، و«الأميرُ» فاعل مرفوع، و«نفسُهُ» توكيد معنوي مرفوع تابعه."
+        }
+      ],
+      "practice_ar": [
+        "عطف اسمين على الفاعل في جملتك.",
+        "ضع توكيدًا لفظيًّا (نفسه) ومعنويًّا (كلّ)."
+      ],
+      "awamil_ids": [
+        "harf_atf"
+      ]
+    },
+    {
+      "id": "L09",
+      "order": 9,
+      "title_ar": "النواسخ: كان وأخواتها وإنّ وأخواتها — والخبر جملة",
+      "title_en": "The nawasikh: kana-group and inna-group; khabar as a whole clause",
+      "ajurrumiyyah_bab_ar": "باب مرفوعات الأسماء (اسم كان، خبر إنّ) + المحال (الجملة في محل رفع)",
+      "idea_ar": "كان ترفع المبتدأ (اسمها) وتنصب الخبر؛ وإنّ تنصب المبتدأ (اسمها) وترفع الخبر. ويكبر الخبر حتى يصير جملة في محل رفع.",
+      "idea_en": "Kaana raises its ism and makes its khabar accusative; inna does the reverse. The khabar itself can now be a whole clause in a raised position.",
+      "grows_by_ar": "أضفنا ناسخًا يعمل في اسمين، واكتمل الخبر جملة كاملة لها محلّ.",
+      "awamil": [
+        {
+          "ar": "كان وأخواتها",
+          "works_on_ar": "اسمها (مرفوع) وخبرها (منصوب)",
+          "count": 1
+        },
+        {
+          "ar": "إنّ وأخواتها",
+          "works_on_ar": "اسمها (منصوب) وخبرها (مرفوع)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S003",
+        "S004",
+        "S015"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "حوِّل «العلمُ نورٌ» إلى: كانَ / إنَّ.",
+        "فرِّك S015 ولاحظ صلة الموصول في محل نصب نعت."
+      ],
+      "awamil_ids": [
+        "kana_group",
+        "inna_group",
+        "zann_group"
+      ]
+    },
+    {
+      "id": "L10",
+      "order": 10,
+      "title_ar": "أساليب الطلب والإخبار: الأمر والنهي والاستفهام والتمني",
+      "title_en": "Sentence styles: command, prohibition, question, wishing",
+      "ajurrumiyyah_bab_ar": "باب الأفعال (الأمر، جزم المضارع) + باب المنصوبات (فعل الأمر يعمل في مفعوله)",
+      "idea_ar": "فعل الأمر مبني ومخاطبٌ به فاعله مستتر (أنتَ)، ويعمل نصبًا في مفعوله؛ ولا الناهية تجزم الفعل وتخاطب مستترًا؛ وحروف الاستفهام وأسماؤها مبنية لها محلّ؛ وليت حرف تمنٍّ يعمل عمل إنّ.",
+      "idea_en": "The imperative is built with a hidden 'you' doer and governs its object; laa an-nahiya makes the verb jussive; interrogatives are built with a position; laytaa wishes and works like inna.",
+      "grows_by_ar": "أضفنا أساليب إنشائية كاملة: أمر ونهي واستفهام وتمني — ولكلٍّ أدواته وعوامله.",
+      "awamil": [
+        {
+          "ar": "فعل الأمر",
+          "works_on_ar": "الفاعل المستتر + المفعول به",
+          "count": 1
+        },
+        {
+          "ar": "لا الناهية",
+          "works_on_ar": "الفعل المضارع (جزم بالسكون)",
+          "count": 1
+        },
+        {
+          "ar": "حرف/اسم الاستفهام",
+          "works_on_ar": "مبني في محل رفع أو نصب",
+          "count": 1
+        },
+        {
+          "ar": "ليت",
+          "works_on_ar": "اسمها (منصوب) وخبرها (مرفوع)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S013",
+        "S011",
+        "S009",
+        "S010",
+        "S030"
+      ],
+      "inline_examples": [
+        {
+          "text_ar": "واللهِ لأجتهدنَّ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "tok": 1,
+              "surface_ar": "و",
+              "class": "harf",
+              "kind": "huruf_qasam",
+              "irab_ar": "واو القسم"
+            },
+            {
+              "i": 2,
+              "tok": 1,
+              "surface_ar": "اللهِ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "jarr",
+              "mahall": "mudaf_ilaihi",
+              "irab_ar": "مضاف إليه مجرور (لفظ الجلالة) وهو اسم القسم"
+            },
+            {
+              "i": 3,
+              "tok": 2,
+              "surface_ar": "لَ",
+              "class": "harf",
+              "kind": "harf_jazm",
+              "irab_ar": "لام القسم: حرف جزم وتوكيد"
+            },
+            {
+              "i": 4,
+              "tok": 2,
+              "surface_ar": "أجتهدنَّ",
+              "class": "fil",
+              "kind": "mudari",
+              "case": "jazm",
+              "mahall": null,
+              "irab_ar": "فعل مضارع مجزوم بلام القسم وعلامة جزمه حذف النون، ثم ثُبِّتت النون للتوكيد"
+            }
+          ],
+          "mahall_ar": "جملة «أجتهدنَّ» جواب القسم المقترن باللام فلا محل لها من الإعراب",
+          "tarkeeb_ar": "«واللهِ»: واو قسم واسم قسم مجرور، و«لَ» لام القسم، و«أجتهدنَّ» فعل مضارع مجزوم بحذف النون ثم ثبتت النون للتوكيد؛ والجواب لا محل له من الإعراب."
+        },
+        {
+          "text_ar": "ما أجملَ العلمَ!",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "ما",
+              "class": "harf",
+              "kind": "harf_tajassum",
+              "irab_ar": "حرف تعجب مبني على السكون"
+            },
+            {
+              "i": 2,
+              "surface_ar": "أجملَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ (صيغة التعجب من أفعَل) مبني على الفتح"
+            },
+            {
+              "i": 3,
+              "surface_ar": "العلمَ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "nasb",
+              "mahall": "maful_bih",
+              "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«ما» حرف تعجب، و«أجملَ» فعل ماضٍ لصيغة التعجب، و«العلمَ» مفعول به منصوب."
+        },
+        {
+          "text_ar": "نِعْمَ الطالبُ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "نِعْمَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ (للمدح) مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "الطالبُ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "mubtada",
+              "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة، والخبر محذوف تقديره «مفضَّلٌ»"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«نِعْمَ» فعل ماضٍ للمدح مبني على الفتح، و«الطالبُ» مبتدأ مرفوع وخبره محذوف. (والذم بنقيضه: «بئسَ»)"
+        }
+      ],
+      "practice_ar": [
+        "صغ جملة أمر بمفعول به، ثم حوّلها إلى نهي بـ«لا».",
+        "اسأل بـ«مَن/ما/أين/متى/كيف» وبيّن محل كل أداة.",
+        "صغ تمنيًا بـ«ليت» وقسمًا ومدحًا وذمًّا وتعجبًا."
+      ],
+      "awamil_ids": [
+        "fil_amr",
+        "harf_jazm",
+        "inna_group"
+      ]
+    },
+    {
+      "id": "L11",
+      "order": 11,
+      "title_ar": "المفاعيل المختلفة: المطلق ولأجله ومعه",
+      "title_en": "Object family: absolute, purposive, accompaniment",
+      "ajurrumiyyah_bab_ar": "باب المنصوبات (المفعول المطلق، لأجله، معه)",
+      "idea_ar": "المصدر المنصوب يقوم مقام المفعول: مؤكدًا للفعل (المطلق)، أو بيانًا لسببه (لأجله)؛ واسمٌ بعد واو المعية يُنصب (معه).",
+      "idea_en": "An accusative masdar affirms the verb (mutlaq) or states its purpose (lajlihi); a noun after waw al-ma'iyya is accusative (ma'ahu).",
+      "grows_by_ar": "أضفنا مصدرًا منصوبًا وجارًّا ومجرورًا متعلقين بالفعل.",
+      "awamil": [
+        {
+          "ar": "الفعل",
+          "works_on_ar": "المصدر المنصوب (مطلق/لأجله)",
+          "count": 1
+        },
+        {
+          "ar": "حرف الجر",
+          "works_on_ar": "الاسم المجرور",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S026",
+        "S027"
+      ],
+      "inline_examples": [
+        {
+          "text_ar": "ما سرتُ وأخاك",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "ما",
+              "class": "harf",
+              "kind": "harf_nafiya",
+              "irab_ar": "حرف نفي مبني على السكون"
+            },
+            {
+              "i": 2,
+              "surface_ar": "سرتُ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل"
+            },
+            {
+              "i": 3,
+              "tok": 3,
+              "surface_ar": "و",
+              "class": "harf",
+              "kind": "huruf_atf",
+              "irab_ar": "واو المعية"
+            },
+            {
+              "i": 4,
+              "tok": 3,
+              "surface_ar": "أخاك",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "nasb",
+              "mahall": "maful_maahu",
+              "irab_ar": "مفعول معه منصوب وعلامة نصبه الألف لأنه من الأسماء الخمسة، والكاف ضمير متصل مبني في محل جر مضاف إليه"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«ما» حرف نفي، و«سرتُ» فعل ماضٍ والتاء فاعل، و«و» واو معية، و«أخاك» مفعول معه منصوب بالألف (من الأسماء الخمسة)."
+        }
+      ],
+      "practice_ar": [
+        "اجعل لكل فعل مفعولًا مطلقًا من مصدره.",
+        "صغ جملة بمفعول لأجله + جار ومجرور."
+      ],
+      "awamil_ids": [
+        "fil_mutaadi",
+        "harf_jarr",
+        "waw_maiyya"
+      ]
+    },
+    {
+      "id": "L12",
+      "order": 12,
+      "title_ar": "التمييز والحال",
+      "title_en": "Tamyiz and hal",
+      "ajurrumiyyah_bab_ar": "باب المنصوبات (التمييز، الحال)",
+      "idea_ar": "التمييز اسم منصوب يرفع الإبهام عن عدد أو مقدار (عشرين كتابًا)؛ والحال اسم منصوب يبيّن هيئة صاحبه عند الفعل (مسرورًا) — وقد تكون جملة أو شبه جملة.",
+      "idea_en": "Tamyiz is an accusative removing ambiguity (after numbers/quantities); hal is an accusative describing the state of its saahib — as a word, clause, or phrase.",
+      "grows_by_ar": "أضفنا عددًا فوجب التمييز بعده.",
+      "awamil": [
+        {
+          "ar": "العدد (عشرين)",
+          "works_on_ar": "يستلزم تمييزًا منصوبًا بعده",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S025"
+      ],
+      "inline_examples": [
+        {
+          "text_ar": "جاءَ الطالبُ مسرورًا",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "جاءَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "الطالبُ",
+              "class": "ism",
+              "kind": "zahir",
+              "case": "raf",
+              "mahall": "fail",
+              "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة، وهو صاحب الحال"
+            },
+            {
+              "i": 3,
+              "surface_ar": "مسرورًا",
+              "class": "ism",
+              "kind": "sifa",
+              "case": "nasb",
+              "mahall": "hal",
+              "irab_ar": "حال منصوب وعلامة نصبه الفتحة الظاهرة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«جاءَ» فعل ماضٍ، و«الطالبُ» فاعل مرفوع صاحب الحال، و«مسرورًا» حال منصوب."
+        }
+      ],
+      "practice_ar": [
+        "عدّ من ١١ إلى ١٩ واجعل تمييزًا منصوبًا بعد كل عدد.",
+        "صغ ثلاث جمل بحال مفردة ثم بحال جملة (جاءَ يبتسمُ)."
+      ],
+      "awamil_ids": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "L13",
+      "order": 13,
+      "title_ar": "علامات الإعراب: المثنى والأفعال الخمسة وجمع المذكر السالم",
+      "title_en": "I'rab signs: dual, the five verbs, sound masculine plural",
+      "ajurrumiyyah_bab_ar": "باب معرفة علامات الإعراب + باب مرفوعات الأسماء",
+      "idea_ar": "المثنى يرفع بالألف وينصب ويجر بالياء؛ والأفعال الخمسة ترفع بثبوت النون وتنصب وتجزم بحذفها؛ وجمع المذكر السالم يرفع بالواو وينصب ويجر بالياء.",
+      "idea_en": "Dual: alif for raf, ya for nasb/jarr. The five verbs: noon for raf, deleted noon for nasb/jarr. Sound masculine plural: waw for raf, ya for nasb/jarr.",
+      "grows_by_ar": "أضفنا مضارعًا من الأفعال الخمسة — فعلا تغيّرت علامة الرفع من الضمة إلى ثبوت النون.",
+      "awamil": [
+        {
+          "ar": "الفعل (يكتبون)",
+          "works_on_ar": "الواو فاعل + المفعول به",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S031"
+      ],
+      "inline_examples": [
+        {
+          "text_ar": "جاءَ الطالبانِ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "جاءَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "الطالبانِ",
+              "class": "ism",
+              "kind": "muthanna",
+              "case": "raf",
+              "mahall": "fail",
+              "irab_ar": "فاعل مثنى مرفوع وعلامة رفعه الألف نيابة عن الضمة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«جاءَ» فعل ماضٍ، و«الطالبانِ» فاعل مثنى مرفوع بالألف. (ولو نُصب أو جُرّ فعلامته الياء)"
+        },
+        {
+          "text_ar": "حضرَ المعلّمونَ",
+          "parser": false,
+          "words": [
+            {
+              "i": 1,
+              "surface_ar": "حضرَ",
+              "class": "fil",
+              "kind": "madi",
+              "irab_ar": "فعل ماضٍ مبني على الفتح"
+            },
+            {
+              "i": 2,
+              "surface_ar": "المعلّمونَ",
+              "class": "ism",
+              "kind": "jam_mudhakkar_salim",
+              "case": "raf",
+              "mahall": "fail",
+              "irab_ar": "فاعل جمع مذكر سالم مرفوع وعلامة رفعه الواو نيابة عن الضمة"
+            }
+          ],
+          "mahall_ar": null,
+          "tarkeeb_ar": "«حضرَ» فعل ماضٍ، و«المعلّمونَ» فاعل جمع مذكر سالم مرفوع بالواو. (ولو نُصب أو جُرّ فعلامته الياء)"
+        }
+      ],
+      "practice_ar": [
+        "صغ جملة بمثنى فاعل ثم مفعولًا به.",
+        "صغ جملة بجمع مذكر سالم مفعولًا به ولاحظ الياء.",
+        "جزم فعلا من الأفعال الخمسة بـ«لم» ولاحظ حذف النون."
+      ],
+      "awamil_ids": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "L14",
+      "order": 14,
+      "title_ar": "أدوات الكلام الكبرى: الشرط والنداء والاستثناء",
+      "title_en": "The big tools: condition, vocative, exception",
+      "ajurrumiyyah_bab_ar": "باب المنصوبات (المستثنى، المنادى) + باب الأفعال (الجزم)",
+      "idea_ar": "أداة الشرط الجازمة تجزم فعل الشرط وجوابه؛ وحرف النداء يبني المنادى العلم على ما يُرفع به في محل نصب؛ وأداة الاستثناء تنصب المستثنى.",
+      "idea_en": "Conditional particles make protasis and apodosis jussive; the vocative particle leaves the definite munada built on its raf-sign in an accusative position; exception particles make the mustathna accusative.",
+      "grows_by_ar": "أضفنا جملةً مركّبة من شرطٍ وجواب، وأساليب نداء واستثناء.",
+      "awamil": [
+        {
+          "ar": "أداة الشرط الجازمة (إذا)",
+          "works_on_ar": "فعل الشرط وجوابه (جزم)",
+          "count": 1
+        },
+        {
+          "ar": "الفعل (جاءَ)",
+          "works_on_ar": "الفاعل (مرفوع)",
+          "count": 1
+        },
+        {
+          "ar": "الفعل (أكرمْ)",
+          "works_on_ar": "المفعول به (الهاء)",
+          "count": 1
+        },
+        {
+          "ar": "حرف النداء (يا)",
+          "works_on_ar": "المنادى (مبني في محل نصب)",
+          "count": 1
+        },
+        {
+          "ar": "أداة الاستثناء (إلا)",
+          "works_on_ar": "المستثنى (منصوب)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S016",
+        "S018",
+        "S017"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "اربط جملتين بأداة شرط وجواب مقترن بالفاء.",
+        "نادِ ثلاثة أعلام ثم صغ استثناءً مفرَّغًا."
+      ],
+      "awamil_ids": [
+        "adawat_shart",
+        "fil_lazim",
+        "fil_mutaadi",
+        "harf_nida",
+        "harf_istithna"
+      ]
+    },
+    {
+      "id": "L15",
+      "order": 15,
+      "title_ar": "الجملة الكاملة: كل ما تعلّمته في جملة واحدة",
+      "title_en": "The full-grown sentence: everything together",
+      "ajurrumiyyah_bab_ar": "مراجعة البابين السبعة كلها",
+      "idea_ar": "انظر كيف صارت الجملة من كلمتين إلى تسع: مبتدأ + نعت + جملة فعلية (فعل + مفعول مضاف إليه + جار ومجرور + ظرف مضاف إليه) — ولكل كلمة محلها، وللجملة كلها محلها (خبر في محل رفع).",
+      "idea_en": "See the whole ladder at once: 2 words became 9 — every word has its place, and the whole clause sits as the khabar in a raised position.",
+      "grows_by_ar": "جمعنا كل الخطوات السابقة في جملة واحدة متكاملة.",
+      "awamil": [
+        {
+          "ar": "الفعل المتعدي (يقرأ)",
+          "works_on_ar": "الفاعل المستتر + المفعول به",
+          "count": 1
+        },
+        {
+          "ar": "المضاف (كتابَ)",
+          "works_on_ar": "مضاف إليه (العلمِ)",
+          "count": 1
+        },
+        {
+          "ar": "المضاف (كلَّ)",
+          "works_on_ar": "مضاف إليه (يومٍ)",
+          "count": 1
+        },
+        {
+          "ar": "حرف الجر (في)",
+          "works_on_ar": "الاسم المجرور (المسجدِ)",
+          "count": 1
+        }
+      ],
+      "sentence_ids": [
+        "S029"
+      ],
+      "inline_examples": [],
+      "practice_ar": [
+        "زيّد في S029 نعتًا آخر وحالًا، ثم فرِّكها.",
+        "اكتب جملة من عشر كلمات وأدخلها في البيانات (sentences.json) ثم شغّل test."
+      ],
+      "awamil_ids": [
+        "fil_mutaadi",
+        "idafa",
+        "harf_jarr",
+        "zarfiyya"
+      ]
+    }
+  ]
+}

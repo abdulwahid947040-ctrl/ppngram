@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "name_ar": "المواضع الإعرابية وعلاماتها",
+    "name_en": "Grammatical positions (mahall) and their signs",
+    "version": "1.0.0",
+    "purpose_en": "Canonical list of every place a word can occupy. sentences.json 'words[].mahall' must reference one of these ids (or a tawaabiat id). Use together with taxonomy.json."
+  },
+  "cases": [
+    {
+      "id": "raf",
+      "ar": "الرفع",
+      "en": "nominative",
+      "applies_to_ar": ["الاسم", "الفعل المضارع"],
+      "signs": [
+        {"id": "damma", "ar": "الضمة", "en": "damma", "applies_ar": "للمفرد ولجمع التكسير ولجمع المؤنث السالم"},
+        {"id": "alif", "ar": "الألف", "en": "alif", "applies_ar": "للمثنى"},
+        {"id": "waw", "ar": "الواو", "en": "waw", "applies_ar": "لجمع المذكر السالم وللأسماء الخمسة"},
+        {"id": "hazf_nun_raf", "ar": "حذف النون", "en": "deletion of nun", "applies_ar": "للأسماء الخمسة والأفعال الخمسة"}
+      ],
+      "positions": [
+        {"id": "fail", "ar": "الفاعل", "en": "doer / subject of a verb", "def_ar": "اسم مرفوع تقدَمه فعلٌ مبنيٌّ للمعلوم يدل على من صدر منه الفعل", "example_ar": "نجحَ الطالبُ", "notes_ar": ["وقد يكون ضميرًا متصلًا نحو «كتبتُ»، أو مستترًا تقديره «هُوَ»"]},
+        {"id": "naib_fail", "ar": "نائب الفاعل", "en": "deputy doer (passive subject)", "def_ar": "اسم مرفوع تقدَمه فعلٌ مبنيٌّ للمجهول", "example_ar": "كُتِبَ الدرسُ"},
+        {"id": "mubtada", "ar": "المبتدأ", "en": "subject of a nominal sentence", "def_ar": "اسم مرفوع يقع غالبًا في أول الجملة الاسمية", "example_ar": "العلمُ نورٌ", "notes_ar": ["وقد يتأخر نحو «أين الكتابُ؟»"]},
+        {"id": "khabar", "ar": "الخبر", "en": "predicate of a nominal sentence", "def_ar": "اسم مرفوع يُكمِل مع المبتدأ الفائدة", "example_ar": "العلمُ نورٌ", "types_ar": ["مفرد", "جملة اسمية", "جملة فعلية", "شبه جملة"]},
+        {"id": "ism_kana", "ar": "اسم كان", "en": "subject of kāna and its sisters", "def_ar": "اسم مرفوع تقدَمه فعل من كان وأخواتها", "example_ar": "كان الطالبُ مجتهدًا"},
+        {"id": "khabar_kana", "ar": "خبر كان", "en": "predicate of kāna and its sisters", "def_ar": "اسم منصوب تقدَمه كان وأخواتها", "example_ar": "كان الطالبُ مجتهدًا"},
+        {"id": "ism_inna", "ar": "اسم إنّ", "en": "subject of inna and its sisters", "def_ar": "اسم منصوب تقدَمه حرف من إنّ وأخواتها", "example_ar": "إنّ العلمَ نورٌ"},
+        {"id": "khabar_inna", "ar": "خبر إنّ", "en": "predicate of inna and its sisters", "def_ar": "اسم مرفوع يُكمِل مع اسم إنّ معنى الجملة", "example_ar": "إنّ العلمَ نورٌ"},
+        {"id": "mudaf_ilaihi_marfu", "ar": "المضاف إليه المرفوع", "en": "annexed noun raised", "def_ar": "يُرفع المضاف إليه إذا كان مضافًا إليه مثنى أو جمع مذكر سالم أو جمع مؤنث سالم أو من الأسماء الخمسة", "example_ar": "حضر معلّما المدرسةِ"},
+        {"id": "tabi_marfu", "ar": "تابع المرفوع", "en": "appositive to a nominative", "def_ar": "النعت والعطف والبدل والتوكيد تتبع المتبوع المرفوع", "example_ar": "جاء الطالبُ المجتهدُ"}
+      ]
+    },
+    {
+      "id": "nasb",
+      "ar": "النصب",
+      "en": "accusative",
+      "applies_to_ar": ["الاسم", "الفعل المضارع"],
+      "signs": [
+        {"id": "fatha", "ar": "الفتحة", "en": "fatha", "applies_ar": "للمفرد ولجمع التكسير"},
+        {"id": "alif_nasb", "ar": "الألف", "en": "alif", "applies_ar": "للمثنى وللأسماء الخمسة"},
+        {"id": "ya_nasb", "ar": "الياء", "en": "ya", "applies_ar": "للمثنى ولجمع المؤنث السالم وللاسم المفرد المنقوص"},
+        {"id": "kasra_nasb", "ar": "الكسرة", "en": "kasra", "applies_ar": "لجمع المؤنث السالم"},
+        {"id": "hazf_nun", "ar": "حذف النون", "en": "deletion of nun", "applies_ar": "للأسماء الخمسة وللأفعال الخمسة"}
+      ],
+      "positions": [
+        {"id": "maful_bih", "ar": "المفعول به", "en": "direct object", "def_ar": "اسم منصوب يقع عليه فعل الفاعل", "example_ar": "قرأَ الطالبُ الكتابَ"},
+        {"id": "maful_bih_thani", "ar": "المفعول به الثاني", "en": "second object", "def_ar": "اسم منصوب يقعه فعل متعدٍّ لمفعولين كظنّ وأخواتها وأعطى وأخواتها", "example_ar": "ظننتُ العلمَ نافعًا"},
+        {"id": "maful_mutlaq", "ar": "المفعول المطلق", "en": "absolute object", "def_ar": "مصدر منصوب يأتي لتوكيد الفعل أو بيان نوعه أو عدده", "example_ar": "اضطربتْ اضطرابًا شديدًا", "types_ar": ["مؤكِّد للفعل", "مبيِّن للنوع", "مبيِّن للعدد"]},
+        {"id": "maful_fih", "ar": "المفعول فيه (الظرف)", "en": "adverbial object", "def_ar": "اسم منصوب يبيّن زمان الفعل أو مكانه", "example_ar": "سافرتُ ليلًا", "types_ar": ["ظرف زمان", "ظرف مكان"]},
+        {"id": "maful_lajlihi", "ar": "المفعول لأجله", "en": "object of purpose", "def_ar": "مصدر منصوب يبيّن سبب وقوع الفعل", "example_ar": "أجتهدُ طلبًا للتفوقِ"},
+        {"id": "maful_maahu", "ar": "المفعول معه", "en": "object of accompaniment", "def_ar": "اسم منصوب يقع بعد واو المعية", "example_ar": "ما سرتُ وأخاك"},
+        {"id": "maful_lahu", "ar": "المفعول له", "en": "object for (rare)", "def_ar": "اسم منصوب يقع بعد لام", "example_ar": "ما هذا لبشرٍ"},
+        {"id": "hal", "ar": "الحال", "en": "circumstantial accusative", "def_ar": "اسم منصوب يبيّن هيئة صاحبه وقت وقوع الفعل", "example_ar": "جاء الطالبُ مسرورًا", "types_ar": ["مفرد", "جملة", "شبه جملة"]},
+        {"id": "tamyiz", "ar": "التمييز", "en": "specification", "def_ar": "اسم منصوب يرفع إبهام ما قبله", "example_ar": "اشتريتُ عشرين كتابًا", "types_ar": ["ملفوظ", "ملحوظ"]},
+        {"id": "mustathna", "ar": "المستثنى", "en": "excepted noun", "def_ar": "اسم منصوب يقع بعد أداة استثناء", "example_ar": "ما حضرَ إلا زيدٌ", "types_ar": ["مفرَّغ", "تام مغيِّر", "تام غير مغيِّر", "ناقص"]},
+        {"id": "munada", "ar": "المنادى", "en": "vocative", "def_ar": "الاسم الذي نُودي بصاحبه بحرف نداء", "example_ar": "يا محمدُ اجتهدْ", "notes_ar": [
+          "المفرد العلم والنكرة المقصودة: مبنيّ على ما يُرفع به في محل نصب",
+          "المضاف: مبنيّ على ما يُرفع به في محل نصب، نحو «يا طالبُ العلمِ»",
+          "الشبيه بالمضاف والنكرة غير المقصودة: منصوب ظاهرًا"
+        ]},
+        {"id": "ism_la", "ar": "اسم لا النافية للجنس", "en": "noun after negative لا", "def_ar": "اسم منصوب بعد لا النافية للجنس", "example_ar": "لا شكَّ في وجودِ اللهِ"},
+        {"id": "tabi_mansub", "ar": "تابع المنصوب", "en": "appositive to an accusative", "def_ar": "النعت والعطف والبدل والتوكيد تتبع المتبوع المنصوب", "example_ar": "قرأتُ الكتابَ المفيدَ"}
+      ]
+    },
+    {
+      "id": "jarr",
+      "ar": "الجر",
+      "en": "genitive",
+      "applies_to_ar": ["الاسم"],
+      "signs": [
+        {"id": "kasra", "ar": "الكسرة", "en": "kasra", "applies_ar": "للمصرف"},
+        {"id": "ya_jarr", "ar": "الياء", "en": "ya", "applies_ar": "للمثنى ولجمع المؤنث السالم وللمنقوص"},
+        {"id": "fatha_jarr", "ar": "الفتحة", "en": "fatha", "applies_ar": "للممنوع من الصرف"}
+      ],
+      "positions": [
+        {"id": "ism_majrur", "ar": "الاسم المجرور بحرف الجر", "en": "noun governed by a preposition", "def_ar": "اسم مجرور يقع بعد حرف جر", "example_ar": "ذهبتُ إلى المسجدِ"},
+        {"id": "mudaf_ilaihi", "ar": "المضاف إليه", "en": "genitive of the annexed noun", "def_ar": "اسم مجرور يتبع اسمًا سابقًا (المضاف)", "example_ar": "كتابُ الطالبِ", "notes_ar": ["يُرفع أو يُنصب إذا أُضيف إلى مثنى أو جمع مذكر سالم أو جمع مؤنث سالم أو من الأسماء الخمسة"]},
+        {"id": "tabi_majrur", "ar": "تابع المجرور", "en": "appositive to a genitive", "def_ar": "النعت والعطف والبدل والتوكيد تتبع المتبوع المجرور", "example_ar": "مررتُ بالطالبِ المجتهدِ"}
+      ]
+    }
+  ],
+  "mudari_jazm": {
+    "id": "jazm",
+    "ar": "الجزم",
+    "en": "jussive",
+    "applies_to_ar": ["الفعل المضارع"],
+    "signs": [
+      {"id": "sukun", "ar": "السكون", "applies_ar": "للفعل الصحيح الآخر"},
+      {"id": "hazf_ilah", "ar": "حذف حرف العلة", "applies_ar": "للفعل المعتل الآخر"},
+      {"id": "hazf_nun_jazm", "ar": "حذف النون", "applies_ar": "للأفعال الخمسة"}
+    ],
+    "positions": [
+      {"id": "jazm_ba_harf", "ar": "المضارع المجزوم بحرف", "en": "jussive after a jussive particle", "def_ar": "يُجزم المضارع بعد لم ولمّا ولا الناهية ولام الأمر ولام القسم", "example_ar": "لم يكتُبِ الطالبُ"},
+      {"id": "jazm_bi_adat_shart", "ar": "المضارع المجزوم بأداة شرط", "en": "jussive after a conditional particle", "def_ar": "فعل الشرط المضارع يُجزم بأداة الشرط الجازمة", "example_ar": "إن تجتهدْ تنجحْ"},
+      {"id": "jawab_shart", "ar": "جواب الشرط", "en": "apodosis of a condition", "def_ar": "يجزم جواب الشرط الجازم إذا لم يقترن بالفاء", "example_ar": "من اجتهدْ نجا", "notes_ar": ["وإذا اقترن بالفاء فجملة الجواب لا محل لها من الإعراب"]}
+    ]
+  },
+  "tawaabiat": [
+    {"id": "nat", "ar": "النعت (الصفة)", "en": "adjective", "def_ar": "تابع يبيّن متبوعه", "rule_ar": "يتبع متبوعه في الإعراب والتعريف والتنكير والتذكير والتأنيث", "example_ar": "قرأتُ الكتابَ المفيدَ"},
+    {"id": "atf_bayan", "ar": "عطف البيان", "en": "apposition", "def_ar": "تابع يفسّر متبوعه", "example_ar": "حضر أخوك زيدٌ"},
+    {"id": "badal", "ar": "البدل", "en": "substitute", "def_ar": "تابع مقصود بالحكم", "types_ar": ["مطابق", "كل من كل", "بعض من كل", "اشتمال"], "example_ar": "جاء أخوك زيدٌ"},
+    {"id": "atf", "ar": "المعطوف", "en": "coordinated word", "def_ar": "تابع مرتبط بحرف عطف", "example_ar": "جاء زيدٌ وعمرٌو"},
+    {"id": "tawkid", "ar": "التوكيد", "en": "emphasis", "def_ar": "تابع يحصل به القوة والعلم بالثبوت", "types_ar": ["لفظي (عين، نفس، كل، كلتا)", "معنوي (إنّ، كل، جميع، عامة)"], "example_ar": "جاء الأميرُ نفسُه"}
+  ],
+  "jumla_mahall_ids_note_en": "Sentence-level positions live in taxonomy.json under kalam.children[jumla].facets.mahall (ids: jumla_fi_mahal_raf, jumla_fi_mahal_nasb, jumla_fi_mahal_jarr, jumla_fi_mahal_jazm, jumla_la_mahal_laha)."
+}

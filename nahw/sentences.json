@@ -1,0 +1,4188 @@
+{
+  "meta": {
+    "name_ar": "جملة مشروحة الإعراب والتركيب",
+    "name_en": "Annotated tarkeeb corpus",
+    "version": "1.0.0",
+    "purpose_en": "Each sentence is fully parsed: every word gets its class, case, sign, position (mahall) and classical i'rab phrase; the sentence gets its type, purpose, overall place (mahall) and a tarkeeb paragraph. words[].mahall references positions.json ids; structure roles describe the whole-sentence tree. 'tok' groups split parts of one written token (e.g. بِالقلمِ = بِ + القلمِ).",
+    "word_fields": {
+      "i": "unit number (1-based, includes split parts)",
+      "tok": "written-token number (optional; required when one token is split into several units)",
+      "surface_ar": "the unit as written (with diacritics)",
+      "class": "ism | fil | harf",
+      "kind": "subtype: zahir, sifa, zarf, ishara, mawsul, istifham, munada, damir / madi, mudari, amr, madi_naqis / harf_jarr, nawasikh_inna, ...",
+      "case": "raf | nasb | jarr | jazm | null (mabni words have no case)",
+      "mabni": "true if indeclinable",
+      "mahall": "position id from positions.json (null if none)",
+      "sign_ar": "the i'rab sign",
+      "irab_ar": "full classical i'rab phrase",
+      "gloss_en": "English gloss"
+    }
+  },
+  "sentences": [
+    {
+      "id": "S001",
+      "text_ar": "الطالبُ يقرأُ الكتابَ",
+      "translit": "aṭ-ṭālibu yaqra'u l-kitāba",
+      "gloss_en": "The student reads the book.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 2,
+          "surface_ar": "يقرأُ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "raf",
+          "mahall": null,
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فعل مضارع مرفوع لعدم وجود ناصب ولا جازم وعلامة رفعه الضمة الظاهرة، والفاعل ضمير مستتر وجوبًا تقديره «الطالبُ»",
+          "gloss_en": "reads"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الكتابَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the book"
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «يقرأُ الكتابَ» في محل رفع خبر المبتدأ",
+      "tarkeeb_ar": "«الطالبُ» مبتدأ مرفوع، و«يقرأُ» فعل مضارع مرفوع والفاعل ضمير مستتر تقديره «الطالبُ»، و«الكتابَ» مفعول به منصوب؛ والجملة الفعلية «يقرأُ الكتابَ» في محل رفع خبر المبتدأ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S002",
+      "text_ar": "القرآنُ كتابُ اللهِ",
+      "translit": "al-qur'ānu kitābu llāhi",
+      "gloss_en": "The Qur'an is the book of Allah.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "القرآنُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the Qur'an"
+        },
+        {
+          "i": 2,
+          "surface_ar": "كتابُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة وهو مضاف",
+          "gloss_en": "book"
+        },
+        {
+          "i": 3,
+          "surface_ar": "اللهِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الفتحة (لأنه ممنوع من الصرف)",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الفتحة لأنه ممنوع من الصرف",
+          "gloss_en": "of Allah"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«القرآنُ» مبتدأ مرفوع، و«كتابُ» خبر مرفوع وهو مضاف، و«اللهِ» مضاف إليه مجرور وعلامة جره الفتحة لأنه ممنوع من الصرف.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad_mudaf",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "idafa"
+      ]
+    },
+    {
+      "id": "S003",
+      "text_ar": "كانَ الطالبُ مجتهدًا",
+      "translit": "kāna ṭ-ṭālibu mujtahidan",
+      "gloss_en": "The student was diligent.",
+      "jumla": {
+        "type": "filiyya",
+        "subtype": "kana_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كانَ",
+          "class": "fil",
+          "kind": "madi_naqis",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ ناقص مبني على الفتح",
+          "gloss_en": "was"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "ism_kana",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "اسم كان مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 3,
+          "surface_ar": "مجتهدًا",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "khabar_kana",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "خبر كان منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "diligent"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«كانَ» فعل ماضٍ ناقص مبني على الفتح، و«الطالبُ» اسم كان مرفوع، و«مجتهدًا» خبر كان منصوب.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil_naqis",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_kana",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar_kana",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "kana_group"
+      ]
+    },
+    {
+      "id": "S004",
+      "text_ar": "إنَّ العلمَ نورٌ",
+      "translit": "inna l-'ilma nūrun",
+      "gloss_en": "Indeed, knowledge is light.",
+      "jumla": {
+        "type": "ismiyya",
+        "subtype": "ba_inna_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إنَّ",
+          "class": "harf",
+          "kind": "nawasikh_inna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+          "gloss_en": "indeed"
+        },
+        {
+          "i": 2,
+          "surface_ar": "العلمَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "ism_inna",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "اسم إنّ منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "knowledge"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نورٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar_inna",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر إنّ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "light"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«إنَّ» حرف توكيد ونصب، و«العلمَ» اسم إنّ منصوب، و«نورٌ» خبر إنّ مرفوع.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_inna",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_inna",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar_inna",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "inna_group"
+      ]
+    },
+    {
+      "id": "S005",
+      "text_ar": "ذهبَ الطلابُ إلى المسجدِ",
+      "translit": "dhahaba ṭ-ṭullābu ilā l-masjidi",
+      "gloss_en": "The students went to the mosque.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "ذهبَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "went"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الطلابُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the students"
+        },
+        {
+          "i": 3,
+          "surface_ar": "إلى",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "to"
+        },
+        {
+          "i": 4,
+          "surface_ar": "المسجدِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the mosque"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «إلى المسجدِ» في محل نصب متعلقة بالفعل «ذهبَ»",
+      "tarkeeb_ar": "«ذهبَ» فعل ماضٍ مبني على الفتح، و«الطلابُ» فاعل مرفوع، و«إلى» حرف جر، و«المسجدِ» اسم مجرور؛ وشبه الجملة «إلى المسجدِ» في محل نصب متعلقة بالفعل «ذهبَ».",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_lazim",
+        "harf_jarr"
+      ]
+    },
+    {
+      "id": "S006",
+      "text_ar": "كتبتُ الدرسَ بالقلمِ",
+      "translit": "katabtu d-darsa bil-qalami",
+      "gloss_en": "I wrote the lesson with the pen.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كتبتُ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "I wrote"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الدرسَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the lesson"
+        },
+        {
+          "i": 3,
+          "tok": 3,
+          "surface_ar": "بِ",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "with"
+        },
+        {
+          "i": 4,
+          "tok": 3,
+          "surface_ar": "القلمِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the pen"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «بِالقلمِ» في محل نصب متعلقة بالفعل «كتبتُ»",
+      "tarkeeb_ar": "«كتبتُ» فعل ماضٍ والتاء فاعل، و«الدرسَ» مفعول به منصوب، و«بِ» حرف جر و«القلمِ» اسم مجرور؛ وشبه الجملة «بِالقلمِ» في محل نصب متعلقة بالفعل «كتبتُ».",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi",
+        "harf_jarr"
+      ]
+    },
+    {
+      "id": "S007",
+      "text_ar": "قرأتُ الكتابَ المفيدَ",
+      "translit": "qara'tu l-kitāba l-mufīda",
+      "gloss_en": "I read the useful book.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "قرأتُ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "I read"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الكتابَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the book"
+        },
+        {
+          "i": 3,
+          "surface_ar": "المفيدَ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "nat",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "نعت منصوب تابع للكتاب، والتابع للمعمول فيه حكم المعمول فيه",
+          "gloss_en": "the useful (one)"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«قرأتُ» فعل ماضٍ والتاء فاعل، و«الكتابَ» مفعول به منصوب، و«المفيدَ» نعت منصوب تابعه.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S008",
+      "text_ar": "جاءَ زيدٌ وعمرٌو",
+      "translit": "jā'a zaydun wa-'amrun",
+      "gloss_en": "Zayd and 'Amr came.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "جاءَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "came"
+        },
+        {
+          "i": 2,
+          "surface_ar": "زيدٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "Zayd"
+        },
+        {
+          "i": 3,
+          "tok": 3,
+          "surface_ar": "و",
+          "class": "harf",
+          "kind": "huruf_atf",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف عطف",
+          "gloss_en": "and"
+        },
+        {
+          "i": 4,
+          "tok": 3,
+          "surface_ar": "عمرٌو",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "atf",
+          "sign_ar": "ثبوت الواو (لأنه من الأعلام المقصورة)",
+          "irab_ar": "معطوف على «زيدٌ» مرفوع وعلامة رفعه ثبوت الواو لأنه من الأعلام المقصورة",
+          "gloss_en": "'Amr"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«جاءَ» فعل ماضٍ مبني على الفتح، و«زيدٌ» فاعل مرفوع، و«و» حرف عطف، و«عمرٌو» معطوف على «زيدٌ» مرفوع وعلامة رفعه ثبوت الواو لأنه من الأعلام المقصورة.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "atf",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_lazim",
+        "harf_atf"
+      ]
+    },
+    {
+      "id": "S009",
+      "text_ar": "أين الكتابُ؟",
+      "translit": "ayna l-kitābu?",
+      "gloss_en": "Where is the book?",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "istifham"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "أين",
+          "class": "ism",
+          "kind": "istifham",
+          "case": "nasb",
+          "mabni": true,
+          "mahall": "maful_fih",
+          "sign_ar": "السكون",
+          "irab_ar": "اسم استفهام مبني على السكون في محل نصب مفعول فيه (ظرف مكان) متعلق بخبر مقدم",
+          "gloss_en": "where"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الكتابُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مؤخر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the book"
+        }
+      ],
+      "mahall_ar": "الظرف «أين» في محل نصب متعلق بخبر مقدم، و«الكتابُ» مبتدأ مؤخر",
+      "tarkeeb_ar": "«أين» اسم استفهام مبني على السكون في محل نصب مفعول فيه (ظرف مكان) متعلق بخبر مقدم، و«الكتابُ» مبتدأ مؤخر مرفوع.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "khabar_muqaddam",
+            "kind": "shibh_zarfiyya",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "mubtada_muakhkhar",
+            "words": [
+              2
+            ]
+          }
+        ]
+      },
+      "awamil": []
+    },
+    {
+      "id": "S010",
+      "text_ar": "مَنْ خَلَقَ السَّماواتِ؟",
+      "translit": "man khalaqa s-samāwāti?",
+      "gloss_en": "Who created the heavens?",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "istifham"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "مَنْ",
+          "class": "ism",
+          "kind": "istifham",
+          "case": "raf",
+          "mabni": true,
+          "mahall": "fail",
+          "sign_ar": "السكون",
+          "irab_ar": "اسم استفهام مبني على السكون في محل رفع فاعل",
+          "gloss_en": "who"
+        },
+        {
+          "i": 2,
+          "surface_ar": "خَلَقَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "created"
+        },
+        {
+          "i": 3,
+          "surface_ar": "السَّماواتِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الكسرة (نيابة عن الفتحة لأنه جمع مؤنث سالم)",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم",
+          "gloss_en": "the heavens"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«مَنْ» اسم استفهام مبني على السكون في محل رفع فاعل، و«خَلَقَ» فعل ماضٍ مبني على الفتح، و«السَّماواتِ» مفعول به منصوب وعلامة نصبه الكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fail",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fil",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S011",
+      "text_ar": "لا تُهملْ دروسَكَ",
+      "translit": "lā tuhmil durūsaka",
+      "gloss_en": "Do not neglect your lessons.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "nahy"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "لا",
+          "class": "harf",
+          "kind": "harf_jazm",
+          "sub": "nahy",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "لا الناهية: حرف جازم مبني على السكون",
+          "gloss_en": "do not"
+        },
+        {
+          "i": 2,
+          "surface_ar": "تُهملْ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "jazm",
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل مضارع مجزوم وعلامة جزمه السكون",
+          "gloss_en": "neglect"
+        },
+        {
+          "i": 3,
+          "surface_ar": "دروسَكَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة وهو مضاف، والكاف ضمير متصل مبني في محل جر مضاف إليه",
+          "gloss_en": "your lessons"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«لا» ناهية جازمة، و«تُهملْ» فعل مضارع مجزوم بالسكون، و«دروسَكَ» مفعول به منصوب وهو مضاف والكاف ضمير متصل مبني في محل جر مضاف إليه.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "harf_nahy",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fil",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "harf_jazm",
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S012",
+      "text_ar": "لم يكتُبِ الطالبُ الدرسَ",
+      "translit": "lam yaktubi ṭ-ṭālibu d-darsa",
+      "gloss_en": "The student did not write the lesson.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya",
+        "subtype": "nafi"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "لم",
+          "class": "harf",
+          "kind": "harf_jazm",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف نفي وجزم وقلب مبني على السكون",
+          "gloss_en": "did not"
+        },
+        {
+          "i": 2,
+          "surface_ar": "يكتُبِ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "jazm",
+          "mahall": null,
+          "sign_ar": "حذف حرف العلة",
+          "irab_ar": "فعل مضارع مجزوم وعلامة جزمه حذف حرف العلة",
+          "gloss_en": "write"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 4,
+          "surface_ar": "الدرسَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the lesson"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«لم» حرف نفي وجزم وقلب، و«يكتُبِ» فعل مضارع مجزوم بحذف حرف العلة، و«الطالبُ» فاعل مرفوع، و«الدرسَ» مفعول به منصوب.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "harf_jazm",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fil",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              3
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "harf_jazm",
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S013",
+      "text_ar": "اقرأْ القرآنَ في الصباحِ",
+      "translit": "iqra' l-qur'āna fī ṣ-ṣabāḥi",
+      "gloss_en": "Read the Qur'an in the morning.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "amr"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "اقرأْ",
+          "class": "fil",
+          "kind": "amr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل أمر مبني على السكون",
+          "gloss_en": "read!"
+        },
+        {
+          "i": 2,
+          "surface_ar": "القرآنَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the Qur'an"
+        },
+        {
+          "i": 3,
+          "surface_ar": "في",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "in"
+        },
+        {
+          "i": 4,
+          "surface_ar": "الصباحِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the morning"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «في الصباحِ» في محل نصب متعلقة بالفعل «اقرأْ»",
+      "tarkeeb_ar": "«اقرأْ» فعل أمر مبني على السكون، و«القرآنَ» مفعول به منصوب، و«في» حرف جر و«الصباحِ» اسم مجرور؛ وشبه الجملة «في الصباحِ» في محل نصب متعلقة بالفعل «اقرأْ».",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_amr",
+        "harf_jarr"
+      ]
+    },
+    {
+      "id": "S014",
+      "text_ar": "هذا كتابٌ جديدٌ",
+      "translit": "hādhā kitābun jadīdun",
+      "gloss_en": "This is a new book.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "هذا",
+          "class": "ism",
+          "kind": "ishara",
+          "case": "raf",
+          "mabni": true,
+          "mahall": "mubtada",
+          "sign_ar": "السكون",
+          "irab_ar": "اسم إشارة مبني على السكون في محل رفع مبتدأ",
+          "gloss_en": "this"
+        },
+        {
+          "i": 2,
+          "surface_ar": "كتابٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "a book"
+        },
+        {
+          "i": 3,
+          "surface_ar": "جديدٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "nat",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "نعت مرفوع تابع للخبر «كتابٌ»",
+          "gloss_en": "new"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«هذا» اسم إشارة مبني على السكون في محل رفع مبتدأ، و«كتابٌ» خبر مرفوع، و«جديدٌ» نعت مرفوع تابعه.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": []
+    },
+    {
+      "id": "S015",
+      "text_ar": "الطالبُ الذي نجحَ مجتهدٌ",
+      "translit": "aṭ-ṭālibu lladhī najaḥa mujtahidun",
+      "gloss_en": "The student who succeeded is diligent.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الذي",
+          "class": "ism",
+          "kind": "mawsul",
+          "case": "raf",
+          "mabni": true,
+          "mahall": "fail",
+          "sign_ar": "السكون",
+          "irab_ar": "اسم موصول مبني على السكون في محل رفع فاعل",
+          "gloss_en": "who"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نجحَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "succeeded"
+        },
+        {
+          "i": 4,
+          "surface_ar": "مجتهدٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "diligent"
+        }
+      ],
+      "mahall_ar": "جملة «نجحَ» صلة الموصول، والموصول مع صلته في محل نصب نعت (صفة) للمبتدأ",
+      "tarkeeb_ar": "«الطالبُ» مبتدأ مرفوع، و«الذي» اسم موصول مبني على السكون في محل رفع فاعل، و«نجحَ» فعل ماضٍ؛ وجملة «نجحَ» صلة الموصول، والموصول مع صلته في محل نصب نعت للمبتدأ، و«مجتهدٌ» خبر مرفوع.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "nat",
+            "kind": "jumla_sila",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              2,
+              3
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad",
+            "words": [
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_lazim"
+      ]
+    },
+    {
+      "id": "S016",
+      "text_ar": "إذا جاءَ المسلمُ فأكرمْهُ",
+      "translit": "idhā jā'a l-muslimu fa-akrimhu",
+      "gloss_en": "If the Muslim comes, honour him.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "shartiyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إذا",
+          "class": "harf",
+          "kind": "adawat_shart_jazima",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف شرط جازم مبني على السكون",
+          "gloss_en": "if / when"
+        },
+        {
+          "i": 2,
+          "surface_ar": "جاءَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل الشرط ماضٍ مبني على الفتح",
+          "gloss_en": "comes"
+        },
+        {
+          "i": 3,
+          "surface_ar": "المسلمُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the Muslim"
+        },
+        {
+          "i": 4,
+          "tok": 4,
+          "surface_ar": "فَ",
+          "class": "harf",
+          "kind": "huruf_atf",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "الفاء واقعة في جواب الشرط: حرف عطف",
+          "gloss_en": "then"
+        },
+        {
+          "i": 5,
+          "tok": 4,
+          "surface_ar": "أكرمْهُ",
+          "class": "fil",
+          "kind": "amr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "جواب الشرط مقترنًا بالفاء فلا محل له من الإعراب؛ وهو فعل أمر مبني على السكون، والهاء ضمير متصل مبني في محل نصب مفعول به",
+          "gloss_en": "honour him"
+        }
+      ],
+      "mahall_ar": "جملة «أكرمْهُ» جواب الشرط المقترن بالفاء فلا محل لها من الإعراب",
+      "tarkeeb_ar": "«إذا» حرف شرط جازم، و«جاءَ» فعل الشرط ماضٍ مبني على الفتح، و«المسلمُ» فاعل مرفوع، و«فَ» الفاء واقعة في جواب الشرط، و«أكرمْهُ» جواب الشرط مقترنًا بالفاء فلا محل له من الإعراب، وهو فعل أمر مبني على السكون والهاء مفعول به.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "adat_shart",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "shart",
+            "kind": "jumla_filiyya",
+            "words": [
+              2,
+              3
+            ]
+          },
+          {
+            "role": "jawab_shart",
+            "kind": "jumla_filiyya",
+            "la_mahal": true,
+            "words": [
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "adawat_shart",
+        "fil_lazim",
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S017",
+      "text_ar": "ما حضرَ إلا زيدٌ",
+      "translit": "mā ḥaḍara illā zaydun",
+      "gloss_en": "None came except Zayd.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya",
+        "subtype": "nafi"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "ما",
+          "class": "harf",
+          "kind": "harf_nafiya",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف نفي مبني على السكون",
+          "gloss_en": "not"
+        },
+        {
+          "i": 2,
+          "surface_ar": "حضرَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح، والفاعل ضمير مستتر جوازًا تقديره «هُوَ»",
+          "gloss_en": "came"
+        },
+        {
+          "i": 3,
+          "surface_ar": "إلا",
+          "class": "harf",
+          "kind": "harf_istithna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "أداة استثناء",
+          "gloss_en": "except"
+        },
+        {
+          "i": 4,
+          "surface_ar": "زيدٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "mustathna",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "مستثنى منصوب على الاستثناء المفرَّغ وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "Zayd"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«ما» حرف نفي، و«حضرَ» فعل ماضٍ والفاعل ضمير مستتر جوازًا تقديره «هُوَ»، و«إلا» أداة استثناء، و«زيدٌ» مستثنى منصوب على الاستثناء المفرَّغ.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "harf_nafi",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fil",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "istithna",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "harf_nafiya",
+        "fil_lazim",
+        "harf_istithna"
+      ]
+    },
+    {
+      "id": "S018",
+      "text_ar": "يا محمدُ اجتهدْ",
+      "translit": "yā muḥammadu ijtahid",
+      "gloss_en": "O Muhammad, strive!",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "nida"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "يا",
+          "class": "harf",
+          "kind": "huruf_nida",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف نداء مبني على السكون",
+          "gloss_en": "O"
+        },
+        {
+          "i": 2,
+          "surface_ar": "محمدُ",
+          "class": "ism",
+          "kind": "munada",
+          "case": "nasb",
+          "mabni": true,
+          "mahall": "munada",
+          "sign_ar": "الضم",
+          "irab_ar": "منادى مفرد علم مبني على الضم في محل نصب",
+          "gloss_en": "O Muhammad"
+        },
+        {
+          "i": 3,
+          "surface_ar": "اجتهدْ",
+          "class": "fil",
+          "kind": "amr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل أمر مبني على السكون",
+          "gloss_en": "strive!"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«يا» حرف نداء، و«محمدُ» منادى مفرد علم مبني على الضم في محل نصب، و«اجتهدْ» فعل أمر مبني على السكون.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "harf_nida",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "munada",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "fil",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "harf_nida",
+        "fil_amr"
+      ]
+    },
+    {
+      "id": "S019",
+      "text_ar": "كتبَ الولدُ الدرسَ في دفترِهِ",
+      "translit": "kataba l-waladu d-darsa fī daftarihi",
+      "gloss_en": "The boy wrote the lesson in his notebook.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كتبَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "wrote"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الولدُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the boy"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الدرسَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the lesson"
+        },
+        {
+          "i": 4,
+          "surface_ar": "في",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "in"
+        },
+        {
+          "i": 5,
+          "surface_ar": "دفترِهِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة وهو مضاف، والهاء ضمير متصل مبني في محل جر مضاف إليه",
+          "gloss_en": "in his notebook"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «في دفترِهِ» في محل نصب متعلقة بالفعل «كتبَ»",
+      "tarkeeb_ar": "«كتبَ» فعل ماضٍ، و«الولدُ» فاعل مرفوع، و«الدرسَ» مفعول به منصوب، و«في» حرف جر، و«دفترِهِ» اسم مجرور وهو مضاف والهاء مضاف إليه؛ وشبه الجملة «في دفترِهِ» في محل نصب متعلقة بالفعل «كتبَ».",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              3
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi",
+        "harf_jarr",
+        "idafa"
+      ]
+    },
+    {
+      "id": "S020",
+      "text_ar": "الجوُّ جميلٌ اليومَ",
+      "translit": "al-jawwu jamīlun al-yauma",
+      "gloss_en": "The weather is fine today.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الجوُّ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the weather"
+        },
+        {
+          "i": 2,
+          "surface_ar": "جميلٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "fine"
+        },
+        {
+          "i": 3,
+          "surface_ar": "اليومَ",
+          "class": "ism",
+          "kind": "zarf",
+          "case": "nasb",
+          "mahall": "maful_fih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "ظرف زمان منصوب وعلامة نصبه الفتحة الظاهرة، متعلق بخبر محذوف تقديره «موجودٌ»",
+          "gloss_en": "today"
+        }
+      ],
+      "mahall_ar": "الظرف «اليومَ» في محل نصب متعلق بخبر محذوف",
+      "tarkeeb_ar": "«الجوُّ» مبتدأ مرفوع، و«جميلٌ» خبر مرفوع، و«اليومَ» ظرف زمان منصوب متعلق بخبر محذوف تقديره «موجودٌ».",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_fih",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "zarfiyya"
+      ]
+    },
+    {
+      "id": "S021",
+      "text_ar": "نجحَ الطالبُ",
+      "translit": "najaḥa ṭ-ṭālibu",
+      "gloss_en": "The student succeeded.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "نجحَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "succeeded"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«نجحَ» فعل ماضٍ مبني على الفتح، و«الطالبُ» فاعل مرفوع. أصغر جملة فعلية: فعلٌ وفاعلٌ.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              2
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_lazim"
+      ]
+    },
+    {
+      "id": "S022",
+      "text_ar": "العلمُ نورٌ نافعٌ",
+      "translit": "al-'ilmu nūrun nāfi'un",
+      "gloss_en": "Knowledge is a beneficial light.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "العلمُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "knowledge"
+        },
+        {
+          "i": 2,
+          "surface_ar": "نورٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "a light"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نافعٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "nat",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "نعت مرفوع تابع للخبر «نورٌ»",
+          "gloss_en": "beneficial"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«العلمُ» مبتدأ مرفوع، و«نورٌ» خبر مرفوع، و«نافعٌ» نعت مرفوع تابعه؛ فكبرت الجملة بنعتٍ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": []
+    },
+    {
+      "id": "S023",
+      "text_ar": "الطالبُ في المسجدِ",
+      "translit": "aṭ-ṭālibu fī l-masjidi",
+      "gloss_en": "The student is in the mosque.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 2,
+          "surface_ar": "في",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "in"
+        },
+        {
+          "i": 3,
+          "surface_ar": "المسجدِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the mosque"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «في المسجدِ» في محل نصب متعلقة بخبر محذوف",
+      "tarkeeb_ar": "«الطالبُ» مبتدأ مرفوع، و«في» حرف جر، و«المسجدِ» اسم مجرور؛ وشبه الجملة «في المسجدِ» في محل نصب متعلقة بخبر محذوف تقديره «حاضرٌ».",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "shibh_jumla",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "harf_jarr",
+        "zarfiyya"
+      ]
+    },
+    {
+      "id": "S024",
+      "text_ar": "قرأَ الطالبُ كتابَ اللهِ",
+      "translit": "qara'a ṭ-ṭālibu kitāba llāhi",
+      "gloss_en": "The student read the book of Allah.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "قرأَ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني على الفتح",
+          "gloss_en": "read"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 3,
+          "surface_ar": "كتابَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة وهو مضاف",
+          "gloss_en": "book"
+        },
+        {
+          "i": 4,
+          "surface_ar": "اللهِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الفتحة (لأنه ممنوع من الصرف)",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الفتحة لأنه ممنوع من الصرف",
+          "gloss_en": "of Allah"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«قرأَ» فعل ماضٍ، و«الطالبُ» فاعل مرفوع، و«كتابَ» مفعول به منصوب وهو مضاف، و«اللهِ» مضاف إليه مجرور؛ فكبرت الجملة بالإضافة.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fail",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi",
+        "idafa"
+      ]
+    },
+    {
+      "id": "S025",
+      "text_ar": "اشتريتُ عشرينَ كتابًا",
+      "translit": "ishtaraytu 'ishrīna kitāban",
+      "gloss_en": "I bought twenty books.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "اشتريتُ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "I bought"
+        },
+        {
+          "i": 2,
+          "surface_ar": "عشرينَ",
+          "class": "ism",
+          "kind": "number",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة (لأنه ممنوع من الصرف)",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة لأنه ممنوع من الصرف",
+          "gloss_en": "twenty"
+        },
+        {
+          "i": 3,
+          "surface_ar": "كتابًا",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "tamyiz",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "تمييز منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "books"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«اشتريتُ» فعل ماضٍ والتاء فاعل، و«عشرينَ» مفعول به منصوب بالفتحة لأنه ممنوع من الصرف، و«كتابًا» تمييز منصوب.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "tamyiz",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S026",
+      "text_ar": "كتبتُ الدرسَ كتابةً",
+      "translit": "katabtu d-darsa kitābatan",
+      "gloss_en": "I wrote the lesson in writing (thoroughly).",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كتبتُ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "I wrote"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الدرسَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the lesson"
+        },
+        {
+          "i": 3,
+          "surface_ar": "كتابةً",
+          "class": "ism",
+          "kind": "masdar",
+          "case": "nasb",
+          "mahall": "maful_mutlaq",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "مفعول مطلق منصوب توكيدٌ للفعل وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "a writing"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«كتبتُ» فعل ماضٍ والتاء فاعل، و«الدرسَ» مفعول به منصوب، و«كتابةً» مفعول مطلق منصوب مؤكد للفعل.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_mutlaq",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S027",
+      "text_ar": "اجتهدْ طلبًا للتفوقِ",
+      "translit": "ijtahid ṭalaban li-t-tafawwuqi",
+      "gloss_en": "Strive for the sake of attaining excellence.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "amr"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "اجتهدْ",
+          "class": "fil",
+          "kind": "amr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل أمر مبني على السكون",
+          "gloss_en": "strive!"
+        },
+        {
+          "i": 2,
+          "surface_ar": "طلبًا",
+          "class": "ism",
+          "kind": "masdar",
+          "case": "nasb",
+          "mahall": "maful_lajlihi",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "مفعول لأجله منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "for seeking"
+        },
+        {
+          "i": 3,
+          "tok": 3,
+          "surface_ar": "لِ",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "for"
+        },
+        {
+          "i": 4,
+          "tok": 3,
+          "surface_ar": "التفوقِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "excellence"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «لِلتفوقِ» في محل نصب متعلقة بالفعل «اجتهدْ»",
+      "tarkeeb_ar": "«اجتهدْ» فعل أمر مبني على السكون، و«طلبًا» مفعول لأجله منصوب، و«لِ» حرف جر و«التفوقِ» اسم مجرور؛ وشبه الجملة «لِلتفوقِ» في محل نصب متعلقة بالفعل «اجتهدْ».",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_lajlihi",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_amr",
+        "harf_jarr"
+      ]
+    },
+    {
+      "id": "S028",
+      "text_ar": "الطالبُ تحتَ الشجرةِ",
+      "translit": "aṭ-ṭālibu taḥta sh-shajarati",
+      "gloss_en": "The student is under the tree.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 2,
+          "surface_ar": "تحتَ",
+          "class": "ism",
+          "kind": "zarf",
+          "case": "nasb",
+          "mahall": "maful_fih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "ظرف مكان منصوب وعلامة نصبه الفتحة الظاهرة، متعلق بخبر محذوف تقديره «جالسٌ»، وهو مضاف",
+          "gloss_en": "under"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الشجرةِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the tree"
+        }
+      ],
+      "mahall_ar": "الظرف «تحتَ» في محل نصب متعلق بخبر محذوف",
+      "tarkeeb_ar": "«الطالبُ» مبتدأ مرفوع، و«تحتَ» ظرف مكان منصوب وهو مضاف، و«الشجرةِ» مضاف إليه مجرور؛ والظرف متعلق بخبر محذوف تقديره «جالسٌ».",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "shibh_zarfiyya",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "zarfiyya",
+        "idafa"
+      ]
+    },
+    {
+      "id": "S029",
+      "text_ar": "الطالبُ المجتهدُ يقرأُ كتابَ العلمِ في المسجدِ كلَّ يومٍ",
+      "translit": "aṭ-ṭālibu l-mujtahidu yaqra'u kitāba l-'ilmi fī l-masjidi kulla yawmin",
+      "gloss_en": "The diligent student reads the book of knowledge in the mosque every day.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطالبُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the student"
+        },
+        {
+          "i": 2,
+          "surface_ar": "المجتهدُ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "nat",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "نعت مرفوع تابع للمبتدأ «الطالبُ»",
+          "gloss_en": "the diligent (one)"
+        },
+        {
+          "i": 3,
+          "surface_ar": "يقرأُ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "raf",
+          "mahall": null,
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فعل مضارع مرفوع لعدم وجود ناصب ولا جازم وعلامة رفعه الضمة الظاهرة، والفاعل ضمير مستتر وجوبًا تقديره «الطالبُ»",
+          "gloss_en": "reads"
+        },
+        {
+          "i": 4,
+          "surface_ar": "كتابَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة وهو مضاف",
+          "gloss_en": "book"
+        },
+        {
+          "i": 5,
+          "surface_ar": "العلمِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "of knowledge"
+        },
+        {
+          "i": 6,
+          "surface_ar": "في",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "in"
+        },
+        {
+          "i": 7,
+          "surface_ar": "المسجدِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "the mosque"
+        },
+        {
+          "i": 8,
+          "surface_ar": "كلَّ",
+          "class": "ism",
+          "kind": "zarf",
+          "case": "nasb",
+          "mahall": "maful_fih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "ظرف زمان منصوب وعلامة نصبه الفتحة الظاهرة وهو مضاف",
+          "gloss_en": "every"
+        },
+        {
+          "i": 9,
+          "surface_ar": "يومٍ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة (تنوين)",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "day"
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «يقرأُ كتابَ العلمِ في المسجدِ كلَّ يومٍ» في محل رفع خبر المبتدأ",
+      "tarkeeb_ar": "«الطالبُ» مبتدأ مرفوع، و«المجتهدُ» نعت مرفوع تابعه، و«يقرأُ» فعل مضارع مرفوع والفاعل ضمير مستتر وجوبًا تقديره «الطالبُ»، و«كتابَ» مفعول به منصوب وهو مضاف، و«العلمِ» مضاف إليه مجرور، و«في المسجدِ» شبه جملة في محل نصب متعلقة بالفعل، و«كلَّ» ظرف منصوب وهو مضاف، و«يومٍ» مضاف إليه مجرور؛ والجملة الفعلية كلها في محل رفع خبر المبتدأ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi",
+        "idafa",
+        "harf_jarr",
+        "zarfiyya"
+      ]
+    },
+    {
+      "id": "S030",
+      "text_ar": "ليتَ العلمَ نورٌ",
+      "translit": "layta l-'ilma nūrun",
+      "gloss_en": "Would that knowledge were a light!",
+      "jumla": {
+        "type": "ismiyya",
+        "subtype": "ba_inna_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "tamanni"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "ليتَ",
+          "class": "harf",
+          "kind": "nawasikh_inna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف تمنٍّ ونصب مبني على الفتح",
+          "gloss_en": "would that"
+        },
+        {
+          "i": 2,
+          "surface_ar": "العلمَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "ism_inna",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "اسم ليت منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "knowledge"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نورٌ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar_inna",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر ليت مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "a light"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«ليتَ» حرف تمنٍّ ونصب، و«العلمَ» اسم ليت منصوب، و«نورٌ» خبر ليت مرفوع.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_inna",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_inna",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar_inna",
+            "words": [
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "inna_group"
+      ]
+    },
+    {
+      "id": "S031",
+      "text_ar": "الطلابُ يكتبونَ الدرسَ",
+      "translit": "aṭ-ṭullābu yaktubūna d-darsa",
+      "gloss_en": "The students write the lesson.",
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الطلابُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the students"
+        },
+        {
+          "i": 2,
+          "surface_ar": "يكتبونَ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "raf",
+          "mahall": null,
+          "sign_ar": "ثبوت النون",
+          "irab_ar": "فعل مضارع مرفوع بثبوت النون لأنه من الأفعال الخمسة، والواو ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "they write"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الدرسَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the lesson"
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «يكتبونَ الدرسَ» في محل رفع خبر المبتدأ",
+      "tarkeeb_ar": "«الطلابُ» مبتدأ مرفوع، و«يكتبونَ» فعل مضارع مرفوع بثبوت النون (من الأفعال الخمسة) والواو فاعل، و«الدرسَ» مفعول به منصوب؛ والجملة الفعلية في محل رفع خبر المبتدأ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ]
+    },
+    {
+      "id": "S032",
+      "text_ar": "كُتِبَ الدرسُ",
+      "translit": "kutiba d-darsu",
+      "gloss_en": "The lesson was written.",
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كُتِبَ",
+          "class": "fil",
+          "kind": "madi_majhul",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ مبني للمجهول مبني على الفتح",
+          "gloss_en": "was written"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الدرسُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "naib_fail",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "نائب فاعل مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the lesson"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«كُتِبَ» فعل ماضٍ مبني للمجهول مبني على الفتح، و«الدرسُ» نائب فاعل مرفوع.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "naib_fail",
+            "words": [
+              2
+            ]
+          }
+        ]
+      },
+      "awamil": [
+        "fil_majhul"
+      ]
+    },
+    {
+      "id": "S033",
+      "text_ar": "إنَّ اللهَ مع الصابرينَ",
+      "translit": "inna llāha ma'a ṣ-ṣābirīna",
+      "gloss_en": "Indeed, Allah is with the patient.",
+      "source": {
+        "type": "quran",
+        "ref": "2:153",
+        "edition": "quran-uthmani",
+        "note_en": "final clause of the ayah"
+      },
+      "jumla": {
+        "type": "ismiyya",
+        "subtype": "ba_inna_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "inna_group",
+        "harf_jarr"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إنَّ",
+          "class": "harf",
+          "kind": "nawasikh_inna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+          "gloss_en": "indeed"
+        },
+        {
+          "i": 2,
+          "surface_ar": "اللهَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "ism_inna",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "اسم إنّ منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 3,
+          "surface_ar": "مع",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "with"
+        },
+        {
+          "i": 4,
+          "surface_ar": "الصابرينَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الياء (لأنه جمع مذكر سالم)",
+          "irab_ar": "اسم مجرور وعلامة جره الياء لأنه جمع مذكر سالم",
+          "gloss_en": "the patient ones"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «مع الصابرينَ» في محل نصب متعلقة بخبر إنّ",
+      "tarkeeb_ar": "«إنَّ» حرف توكيد ونصب، و«اللهَ» اسم إنّ منصوب، و«مع» حرف جر، و«الصابرينَ» اسم مجرور بالياء لأنه جمع مذكر سالم؛ وشبه الجملة «مع الصابرينَ» في محل نصب متعلقة بخبر إنّ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_inna",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_inna",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "shibh_jumla",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S034",
+      "text_ar": "كان الناسُ أُمّةً واحدةً",
+      "translit": "kāna n-nāsu ummatan wāḥidatan",
+      "gloss_en": "Mankind was one community.",
+      "source": {
+        "type": "quran",
+        "ref": "2:213",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "filiyya",
+        "subtype": "kana_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "kana_group"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "كان",
+          "class": "fil",
+          "kind": "madi_naqis",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ ناقص مبني على الفتح",
+          "gloss_en": "was"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الناسُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "ism_kana",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "اسم كان مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "mankind"
+        },
+        {
+          "i": 3,
+          "surface_ar": "أُمّةً",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "khabar_kana",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "خبر كان منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "one community"
+        },
+        {
+          "i": 4,
+          "surface_ar": "واحدةً",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "nat",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "نعت منصوب تابع للخبر «أُمّةً»",
+          "gloss_en": "single"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«كان» فعل ماضٍ ناقص، و«الناسُ» اسم كان مرفوع، و«أُمّةً» خبر كان منصوب، و«واحدةً» نعت منصوب تابعه.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil_naqis",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_kana",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar_kana",
+            "words": [
+              3
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S035",
+      "text_ar": "اللهُ خالقُ كلِّ شيءٍ",
+      "translit": "allāhu khāliqu kulli shay'in",
+      "gloss_en": "Allah is the creator of everything.",
+      "source": {
+        "type": "quran",
+        "ref": "39:62",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "idafa"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "اللهُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 2,
+          "surface_ar": "خالقُ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة وهو مضاف",
+          "gloss_en": "creator"
+        },
+        {
+          "i": 3,
+          "surface_ar": "كلِّ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة",
+          "gloss_en": "every"
+        },
+        {
+          "i": 4,
+          "surface_ar": "شيءٍ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة (تنوين)",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "thing"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«اللهُ» مبتدأ مرفوع، و«خالقُ» خبر مرفوع وهو مضاف، و«كلِّ» مضاف إليه مجرور، و«شيءٍ» مضاف إليه مجرور؛ فسلسلة الإضافة من ثلاث.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad_mudaf",
+            "words": [
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S036",
+      "text_ar": "إنما الأعمالُ بالنياتِ",
+      "translit": "innamā l-a'mālu bin-niyyāti",
+      "gloss_en": "Deeds are only by intentions.",
+      "source": {
+        "type": "hadith",
+        "ref": "Bukhari 1",
+        "edition": "ara-bukhari",
+        "collection": "صحيح البخاري — أول الحديث من كتاب بدء الوحي"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "tajrim_wa_tajzim",
+        "harf_jarr"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إنما",
+          "class": "harf",
+          "kind": "harf_tajrim_wa_tajzim",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف تجر الاسم وتجزم الفعل، وفائدته الحصر",
+          "gloss_en": "only"
+        },
+        {
+          "i": 2,
+          "surface_ar": "الأعمالُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "deeds"
+        },
+        {
+          "i": 3,
+          "tok": 3,
+          "surface_ar": "بِ",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر مبني على السكون",
+          "gloss_en": "by"
+        },
+        {
+          "i": 4,
+          "tok": 3,
+          "surface_ar": "النياتِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "intentions"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «بِالنياتِ» في محل نصب متعلقة بخبر مقدم تقديره «ثابتةٌ»",
+      "tarkeeb_ar": "«إنما» حرف تجر الاسم وتجزم الفعل وفائدته الحصر، و«الأعمالُ» مبتدأ مرفوع، و«بِ» حرف جر و«النياتِ» اسم مجرور؛ وشبه الجملة متعلقة بخبر مقدم.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_tajrim",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "mubtada",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "shibh_jumla",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S037",
+      "text_ar": "الدينُ النصيحةُ",
+      "translit": "ad-dīnu n-naṣīḥah",
+      "gloss_en": "Religion is sincere advice.",
+      "source": {
+        "type": "hadith",
+        "ref": "Muslim 55",
+        "collection": "صحيح مسلم — كتاب الإيمان"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الدينُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "religion"
+        },
+        {
+          "i": 2,
+          "surface_ar": "النصيحةُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "sincere advice"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«الدينُ» مبتدأ مرفوع، و«النصيحةُ» خبر مرفوع.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad",
+            "words": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S038",
+      "text_ar": "الدنيا سجنُ المؤمنِ",
+      "translit": "ad-dunyā sižnu l-mu'mini",
+      "gloss_en": "The world is the prison of the believer.",
+      "source": {
+        "type": "hadith",
+        "ref": "Muslim 2956",
+        "collection": "صحيح مسلم — كتاب الذكر والدعاء"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "idafa"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الدنيا",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الألف (لأنه ممنوع من الصرف)",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الألف لأنه ممنوع من الصرف",
+          "gloss_en": "the world"
+        },
+        {
+          "i": 2,
+          "surface_ar": "سجنُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة وهو مضاف",
+          "gloss_en": "prison"
+        },
+        {
+          "i": 3,
+          "surface_ar": "المؤمنِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "of the believer"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«الدنيا» مبتدأ مرفوع بالألف (ممنوع من الصرف)، و«سجنُ» خبر مرفوع وهو مضاف، و«المؤمنِ» مضاف إليه مجرور.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad_mudaf",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S039",
+      "text_ar": "وَاللَّهُ يُحِبُّ الصَّابِرِينَ",
+      "translit": "wallāhu yuḥibbu ṣ-ṣābirīna",
+      "gloss_en": "And Allah loves the patient ones.",
+      "source": {
+        "type": "quran",
+        "ref": "3:146",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "harf_atf",
+        "fil_mutaadi"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "tok": 1,
+          "surface_ar": "و",
+          "class": "harf",
+          "kind": "huruf_atf",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "واو عطف",
+          "gloss_en": "and"
+        },
+        {
+          "i": 2,
+          "tok": 1,
+          "surface_ar": "اللهُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 3,
+          "surface_ar": "يُحِبُّ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "raf",
+          "mahall": null,
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فعل مضارع مرفوع لعدم وجود ناصب ولا جازم وعلامة رفعه الضمة الظاهرة، والفاعل ضمير مستتر وجوبًا تقديره «اللهُ»",
+          "gloss_en": "loves",
+          "tok": 2
+        },
+        {
+          "i": 4,
+          "surface_ar": "الصَّابِرِينَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الياء (لأنه جمع مذكر سالم)",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الياء لأنه جمع مذكر سالم",
+          "gloss_en": "the patient ones",
+          "tok": 3
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «يُحِبُّ الصَّابِرِينَ» في محل رفع خبر المبتدأ",
+      "tarkeeb_ar": "«و» واو عطف، و«اللهُ» مبتدأ مرفوع، و«يُحِبُّ» فعل مضارع مرفوع والفاعل مستتر وجوبًا، و«الصَّابِرِينَ» مفعول به منصوب بالياء؛ والجملة الفعلية في محل رفع خبر المبتدأ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "atf",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "mubtada",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S040",
+      "text_ar": "إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ",
+      "translit": "inna llāha yuḥibbu l-muḥsinīna",
+      "gloss_en": "Indeed, Allah loves the good-doers.",
+      "source": {
+        "type": "quran",
+        "ref": "3:134",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya",
+        "subtype": "ba_inna_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "inna_group",
+        "fil_mutaadi"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إِنَّ",
+          "class": "harf",
+          "kind": "nawasikh_inna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+          "gloss_en": "indeed"
+        },
+        {
+          "i": 2,
+          "surface_ar": "اللَّهَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "ism_inna",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "اسم إنّ منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 3,
+          "surface_ar": "يُحِبُّ",
+          "class": "fil",
+          "kind": "mudari",
+          "case": "raf",
+          "mahall": null,
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "فعل مضارع مرفوع لعدم وجود ناصب ولا جازم، والفاعل ضمير مستتر وجوبًا تقديره «اللَّهَ»",
+          "gloss_en": "loves"
+        },
+        {
+          "i": 4,
+          "surface_ar": "الْمُحْسِنِينَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الياء (لأنه جمع مذكر سالم)",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الياء لأنه جمع مذكر سالم",
+          "gloss_en": "the good-doers"
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «يُحِبُّ الْمُحْسِنِينَ» في محل رفع خبر إنّ",
+      "tarkeeb_ar": "«إِنَّ» حرف توكيد ونصب، و«اللَّهَ» اسم إنّ منصوب، و«يُحِبُّ» فعل مضارع مرفوع، و«الْمُحْسِنِينَ» مفعول به منصوب؛ والجملة الفعلية في محل رفع خبر إنّ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_inna",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_inna",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S041",
+      "text_ar": "نَحْنُ نَزَّلْنَا الذِّكْرَ",
+      "translit": "naḥnu nazzalnā dh-dhikra",
+      "gloss_en": "We sent down the Reminder.",
+      "source": {
+        "type": "quran",
+        "ref": "15:9",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "fil_mutaadi"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "نَحْنُ",
+          "class": "ism",
+          "kind": "damir",
+          "case": "raf",
+          "mabni": true,
+          "mahall": "mubtada",
+          "sign_ar": "الضم",
+          "irab_ar": "ضمير منفصل مبني على الفتح في محل رفع مبتدأ، وهو توكيد معنوي",
+          "gloss_en": "we"
+        },
+        {
+          "i": 2,
+          "surface_ar": "نَزَّلْنَا",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير رفع متحرك، والنا ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "we sent down"
+        },
+        {
+          "i": 3,
+          "surface_ar": "الذِّكْرَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "the Reminder"
+        }
+      ],
+      "mahall_ar": "الجملة الفعلية «نَزَّلْنَا الذِّكْرَ» في محل رفع خبر المبتدأ",
+      "tarkeeb_ar": "«نَحْنُ» ضمير منفصل مبني في محل رفع مبتدأ وهو توكيد معنوي، و«نَزَّلْنَا» فعل ماضٍ والنا فاعل، و«الذِّكْرَ» مفعول به منصوب؛ والجملة الفعلية في محل رفع خبر المبتدأ.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "jumla_filiyya",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S042",
+      "text_ar": "عسى المطرُ نازلٌ",
+      "translit": "'asā l-maṭru nāzilun",
+      "gloss_en": "It may be that the rain is falling.",
+      "source": {
+        "type": "نموذجي",
+        "note_en": "on the pattern of عَسَىٰ رَبُّكُمْ أَن يَرْحَمَكُمْ (17:24)"
+      },
+      "jumla": {
+        "type": "filiyya",
+        "subtype": "naqisa"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "afaal_rajaa"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "عسى",
+          "class": "fil",
+          "kind": "madi_naqis",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ (من أفعال الرجاء: عسى وحرى) ناقص مبني على الفتح",
+          "gloss_en": "may be"
+        },
+        {
+          "i": 2,
+          "surface_ar": "المطرُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "ism_kana",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "اسم عسى مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "the rain"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نازلٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "khabar_kana",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر عسى منصوب وعلامة نصبه الضمة الظاهرة",
+          "gloss_en": "falling"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«عسى» فعل ماضٍ من أفعال الرجاء ناقص مبني على الفتح، و«المطرُ» اسم عسى مرفوع، و«نازلٌ» خبر عسى منصوب.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil_naqis",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_kana",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar_kana",
+            "words": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S043",
+      "text_ar": "ظننتُ العلمَ نافعًا",
+      "translit": "ẓanantu l-'ilma nāfi'an",
+      "gloss_en": "I thought knowledge to be beneficial.",
+      "source": {
+        "type": "نموذجي",
+        "note_en": "on the pattern of وَلَا تَحْسَبَنَّ الَّذِينَ قُتِلُوا فِي سَبِيلِ اللَّهِ أَمْوَاتًا (3:169)"
+      },
+      "jumla": {
+        "type": "filiyya",
+        "subtype": "afal_qulub"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "zann_group"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "ظننتُ",
+          "class": "fil",
+          "kind": "madi",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل ماضٍ (من أفعال القلوب) مبني على السكون لاتصاله بضمير رفع متحرك، والتاء ضمير متصل مبني في محل رفع فاعل",
+          "gloss_en": "I thought"
+        },
+        {
+          "i": 2,
+          "surface_ar": "العلمَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "maful_bih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "مفعول به أول منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "knowledge"
+        },
+        {
+          "i": 3,
+          "surface_ar": "نافعًا",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "maful_bih_thani",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "مفعول به ثانٍ منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "beneficial"
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«ظننتُ» فعل ماضٍ من أفعال القلوب والتاء فاعل، و«العلمَ» مفعول أول منصوب، و«نافعًا» مفعول ثانٍ منصوب (وهو أصل خبر المبتدأ).",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "maful_bih_thani",
+            "words": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "S044",
+      "text_ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "translit": "qul huwa llāhu aḥad",
+      "gloss_en": "Say: He is Allah, the One.",
+      "source": {
+        "type": "quran",
+        "ref": "112:1",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "filiyya"
+      },
+      "purpose": {
+        "category": "inshiyya",
+        "subtype": "amr"
+      },
+      "awamil": [
+        "fil_amr",
+        "harf_atf"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "قُلْ",
+          "class": "fil",
+          "kind": "amr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "فعل أمر مبني على السكون، والفاعل ضمير مستتر وجوبًا تقديره «أنتَ»، والجملة بعده في محل نصب مفعول به (المقول)",
+          "gloss_en": "say!"
+        },
+        {
+          "i": 2,
+          "surface_ar": "هُوَ",
+          "class": "ism",
+          "kind": "damir",
+          "case": "raf",
+          "mabni": true,
+          "mahall": "mubtada",
+          "sign_ar": "الضم",
+          "irab_ar": "ضمير منفصل مبني على الفتح في محل رفع مبتدأ",
+          "gloss_en": "He"
+        },
+        {
+          "i": 3,
+          "surface_ar": "اللَّهُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 4,
+          "surface_ar": "أَحَدٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "nat",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "نعت مرفوع تابع للخبر «اللَّهُ»",
+          "gloss_en": "one"
+        }
+      ],
+      "mahall_ar": "الجملة الاسمية «هُوَ اللَّهُ أَحَدٌ» في محل نصب مفعول به لفعل الأمر «قُلْ» (تقدير: قُلْ: هو اللهُ أحدُ)",
+      "tarkeeb_ar": "«قُلْ» فعل أمر والفاعل مستتر وجوبًا، و«هُوَ» مبتدأ مرفوع، و«اللَّهُ» خبر مرفوع، و«أَحَدٌ» نعت مرفوع؛ والجملة كلها في محل نصب مفعول به لفعل الأمر.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "fil",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "maful_bih",
+            "kind": "jumla_ismiyya",
+            "mahall": "jumla_fi_mahal_nasb",
+            "words": [
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "parser": false
+    },
+    {
+      "id": "S045",
+      "text_ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "translit": "al-ḥamdu li-llāhi rabbi l-'ālamīn",
+      "gloss_en": "All praise is due to Allah, Lord of the worlds.",
+      "source": {
+        "type": "quran",
+        "ref": "1:2",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "harf_jarr",
+        "idafa"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الْحَمْدُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "all praise"
+        },
+        {
+          "i": 2,
+          "tok": 2,
+          "surface_ar": "لِ",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "لام الجر للاستحقاق",
+          "gloss_en": "to"
+        },
+        {
+          "i": 3,
+          "tok": 2,
+          "surface_ar": "اللَّهِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 4,
+          "surface_ar": "رَبِّ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الكسرة المقدرة على الياء (بمعنى المرفوع)",
+          "irab_ar": "خبر «لِ» المقدر? — المشهور: خبر للمبتدأ المحذوف (المستهلك) — مرفوع وعلامة رفعه الضمة المقدرة على الياء لأنه مضاف، وهو مضاف",
+          "gloss_en": "Lord",
+          "tok": 3
+        },
+        {
+          "i": 5,
+          "surface_ar": "الْعَالَمِينَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الياء (لأنه جمع مذكر سالم)",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الياء لأنه جمع مذكر سالم",
+          "gloss_en": "of the worlds",
+          "tok": 4
+        }
+      ],
+      "mahall_ar": "وجه إعرابها مشهور: «الْحَمْدُ» مبتدأ و«لِلَّهِ» شبه جملة متعلقة بخبره، و«رَبِّ» خبر ثانٍ مرفوع وعلامته الضمة المقدرة على الياء لأنه مضاف، و«الْعَالَمِينَ» مضاف إليه مجرور",
+      "tarkeeb_ar": "«الْحَمْدُ» مبتدأ مرفوع، و«لِ» لام استحقاق و«اللَّهِ» اسم مجرور — شبه جملة متعلقة بخبر الحمد، و«رَبِّ» خبر ثانٍ مرفوع والضمة مقدرة على الياء لأنه مضاف، و«الْعَالَمِينَ» مضاف إليه مجرور بالياء.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "shibh_jumla",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              2,
+              3
+            ]
+          },
+          {
+            "role": "khabar2",
+            "kind": "mufrad_mudaf",
+            "words": [
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "parser": false
+    },
+    {
+      "id": "S046",
+      "text_ar": "إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ",
+      "translit": "inna akramakum 'inda llāhi atqākum",
+      "gloss_en": "Indeed, the noblest of you in Allah's sight is the most righteous of you.",
+      "source": {
+        "type": "quran",
+        "ref": "49:13",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya",
+        "subtype": "ba_inna_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "inna_group",
+        "harf_jarr",
+        "idafa"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "إِنَّ",
+          "class": "harf",
+          "kind": "nawasikh_inna",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+          "gloss_en": "indeed"
+        },
+        {
+          "i": 2,
+          "surface_ar": "أَكْرَمَكُمْ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "nasb",
+          "mahall": "ism_inna",
+          "sign_ar": "الفتحة (لأنه ممنوع من الصرف)",
+          "irab_ar": "اسم إنّ منصوب وعلامة نصبه الفتحة لأنه ممنوع من الصرف، وهو مضاف والكاف ضمير متصل مبني في محل جر مضاف إليه",
+          "gloss_en": "the noblest of you"
+        },
+        {
+          "i": 3,
+          "surface_ar": "عِندَ",
+          "class": "ism",
+          "kind": "zarf",
+          "case": "nasb",
+          "mahall": "maful_fih",
+          "sign_ar": "الفتحة الظاهرة",
+          "irab_ar": "ظرف مكان منصوب وعلامة نصبه الفتحة الظاهرة، متعلق بالخبر المؤخر وهو مضاف",
+          "gloss_en": "near"
+        },
+        {
+          "i": 4,
+          "surface_ar": "اللَّهِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "mudaf_ilaihi",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "Allah"
+        },
+        {
+          "i": 5,
+          "surface_ar": "أَتْقَاكُمْ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "khabar_inna",
+          "sign_ar": "الضمة المقدرة على الألف (لأنه ممنوع من الصرف)",
+          "irab_ar": "خبر إنّ مؤخر مرفوع وعلامة رفعه الضمة المقدرة على الألف لأنه ممنوع من الصرف، وهو مضاف والكاف ضمير متصل مبني في محل جر مضاف إليه",
+          "gloss_en": "the most righteous of you"
+        }
+      ],
+      "mahall_ar": "«أَتْقَاكُمْ» خبر إنّ مؤخر مرفوع (الضمة المقدرة على الألف) — وشبه الجملة «عِندَ اللَّهِ» متعلقة به",
+      "tarkeeb_ar": "«إِنَّ» حرف توكيد ونصب، و«أَكْرَمَكُمْ» اسم إنّ منصوب بالفتحة (ممنوع من الصرف) وهو مضاف والكاف مضاف إليه، و«عِندَ» ظرف منصوب وهو مضاف و«اللَّهِ» مضاف إليه، و«أَتْقَاكُمْ» خبر إنّ مؤخر مرفوع والضمة مقدرة على الألف.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "harf_inna",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "ism_inna",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad_mudaf_muakhkhar",
+            "mahall": "jumla_fi_mahal_raf",
+            "words": [
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "parser": false
+    },
+    {
+      "id": "S047",
+      "text_ar": "وَكَانَ اللَّهُ غَفُورًا رَحِيمًا",
+      "translit": "wa-kāna llāhu ghafūran raḥīman",
+      "gloss_en": "And Allah is ever forgiving and merciful.",
+      "source": {
+        "type": "quran",
+        "ref": "4:96",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "filiyya",
+        "subtype": "kana_wa_ikhawatiha"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "kana_group",
+        "harf_atf"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "tok": 1,
+          "surface_ar": "و",
+          "class": "harf",
+          "kind": "huruf_atf",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "واو عطف",
+          "gloss_en": "and"
+        },
+        {
+          "i": 2,
+          "tok": 1,
+          "surface_ar": "كان",
+          "class": "fil",
+          "kind": "madi_naqis",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "الفتح",
+          "irab_ar": "فعل ماضٍ ناقص مبني على الفتح",
+          "gloss_en": "was"
+        },
+        {
+          "i": 3,
+          "surface_ar": "اللَّهَ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "ism_kana",
+          "sign_ar": "الفتحة (لأنه ممنوع من الصرف)",
+          "irab_ar": "اسم كان مرفوع وعلامة رفعه الضمة المقدرة على الألف لأنه ممنوع من الصرف",
+          "gloss_en": "Allah",
+          "tok": 2
+        },
+        {
+          "i": 4,
+          "surface_ar": "غَفُورًا",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "khabar_kana",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "خبر كان منصوب وعلامة نصبه الفتحة الظاهرة",
+          "gloss_en": "forgiving",
+          "tok": 3
+        },
+        {
+          "i": 5,
+          "surface_ar": "رَحِيمًا",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "nasb",
+          "mahall": "nat",
+          "sign_ar": "الفتحة (تنوين)",
+          "irab_ar": "نعت منصوب تابع للخبر «غَفُورًا»",
+          "gloss_en": "merciful",
+          "tok": 4
+        }
+      ],
+      "mahall_ar": null,
+      "tarkeeb_ar": "«و» واو عطف، و«كان» فعل ماضٍ ناقص، و«اللَّهَ» اسم كان مرفوع (والضمة مقدرة على الألف)، و«غَفُورًا» خبر كان منصوب، و«رَحِيمًا» نعت منصوب تابعه.",
+      "structure": {
+        "kind": "jumla_filiyya",
+        "parts": [
+          {
+            "role": "atf",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "fil_naqis",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "ism_kana",
+            "words": [
+              3
+            ]
+          },
+          {
+            "role": "khabar_kana",
+            "words": [
+              4
+            ]
+          },
+          {
+            "role": "nat",
+            "words": [
+              5
+            ]
+          }
+        ]
+      },
+      "parser": false
+    },
+    {
+      "id": "S048",
+      "text_ar": "الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ",
+      "translit": "aṣ-ṣalātu khayrun mina n-nawm",
+      "gloss_en": "Prayer is better than sleep.",
+      "source": {
+        "type": "quran",
+        "ref": "من الأذان — مسلم، كتاب الصلاة",
+        "edition": "quran-uthmani"
+      },
+      "jumla": {
+        "type": "ismiyya"
+      },
+      "purpose": {
+        "category": "khabariyya"
+      },
+      "awamil": [
+        "harf_jarr"
+      ],
+      "words": [
+        {
+          "i": 1,
+          "surface_ar": "الصَّلَاةُ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "raf",
+          "mahall": "mubtada",
+          "sign_ar": "الضمة الظاهرة",
+          "irab_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+          "gloss_en": "prayer"
+        },
+        {
+          "i": 2,
+          "surface_ar": "خَيْرٌ",
+          "class": "ism",
+          "kind": "sifa",
+          "case": "raf",
+          "mahall": "khabar",
+          "sign_ar": "الضمة (تنوين)",
+          "irab_ar": "خبر مرفوع وعلامة رفعه الضمة الظاهرة وهو مضاف",
+          "gloss_en": "better"
+        },
+        {
+          "i": 3,
+          "surface_ar": "من",
+          "class": "harf",
+          "kind": "harf_jarr",
+          "case": null,
+          "mabni": true,
+          "mahall": null,
+          "sign_ar": "السكون",
+          "irab_ar": "حرف جر للتبعيضية مبني على السكون",
+          "gloss_en": "than"
+        },
+        {
+          "i": 4,
+          "surface_ar": "النَّوْمِ",
+          "class": "ism",
+          "kind": "zahir",
+          "case": "jarr",
+          "mahall": "ism_majrur",
+          "sign_ar": "الكسرة الظاهرة",
+          "irab_ar": "اسم مجرور وعلامة جره الكسرة الظاهرة",
+          "gloss_en": "sleep"
+        }
+      ],
+      "mahall_ar": "شبه الجملة «مِنَ النَّوْمِ» في محل نصب? — لا: متعلقة بالخبر (بمعنى: أفضلُ من النوم)",
+      "tarkeeb_ar": "«الصَّلَاةُ» مبتدأ مرفوع، و«خَيْرٌ» خبر مرفوع وهو مضاف، و«من» حرف جر تبعيضي، و«النَّوْمِ» اسم مجرور.",
+      "structure": {
+        "kind": "jumla_ismiyya",
+        "parts": [
+          {
+            "role": "mubtada",
+            "words": [
+              1
+            ]
+          },
+          {
+            "role": "khabar",
+            "kind": "mufrad_mudaf",
+            "words": [
+              2
+            ]
+          },
+          {
+            "role": "shibh_jumla",
+            "kind": "jarriyya",
+            "words": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "parser": false
+    }
+  ]
+}
