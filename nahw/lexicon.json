@@ -1,0 +1,982 @@
+{
+  "meta": {
+    "name_ar": "المعجم النحوي الأولي",
+    "name_en": "Seed lexicon for the tarkeeb parser",
+    "version": "1.0.0",
+    "purpose_en": "Word-level features. Keys are bare forms (no diacritics, no 'al-'); the parser matches by stripping diacritics and 'al-', splitting prefixes b-/l-/k-/w-/f- and suffixes (k, h, na, kum, hum, ...). Extend this file to widen parser coverage.",
+    "entry_fields": {
+      "class": "ism | fil | harf",
+      "kind": "subtype (harf_jarr, nawasikh_inna, zarf, sifa, istifham, ...)",
+      "en": "English gloss",
+      "madi/mudari/amr/madi_passive/mudari_passive": "verb forms (fil only)",
+      "transitive": "bool (fil)",
+      "naqis": "true for kana-group (fil)",
+      "gender": "m | f (ism)",
+      "number": "sing | dual | pl (ism)",
+      "ghayr_musarif": "true if mamlu min al-sarf (ism)",
+      "special": "parser hint: q_man, q_zarf, la_jins, ma_nafiya"
+    }
+  },
+  "entries": {
+    "من": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "from / who (relative)"
+    },
+    "إلى": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "to"
+    },
+    "عن": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "about / from"
+    },
+    "على": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "on"
+    },
+    "في": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "in"
+    },
+    "مع": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "with"
+    },
+    "ب": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "by / with"
+    },
+    "ل": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "for / to"
+    },
+    "ك": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "like"
+    },
+    "رب": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر مبني على السكون",
+      "en": "many a"
+    },
+    "حتى": {
+      "class": "harf",
+      "kind": "harf_jarr",
+      "irab_ar": "حرف جر (وشرع) مبني على السكون",
+      "en": "until"
+    },
+    "إلا": {
+      "class": "harf",
+      "kind": "harf_istithna",
+      "irab_ar": "أداة استثناء",
+      "en": "except"
+    },
+    "غير": {
+      "class": "harf",
+      "kind": "harf_istithna",
+      "irab_ar": "أداة استثناء",
+      "en": "other than"
+    },
+    "سوى": {
+      "class": "harf",
+      "kind": "harf_istithna",
+      "irab_ar": "أداة استثناء",
+      "en": "other than"
+    },
+    "عدا": {
+      "class": "harf",
+      "kind": "harf_istithna",
+      "irab_ar": "أداة استثناء",
+      "en": "except"
+    },
+    "يا": {
+      "class": "harf",
+      "kind": "huruf_nida",
+      "irab_ar": "حرف نداء مبني على السكون",
+      "en": "O"
+    },
+    "أيا": {
+      "class": "harf",
+      "kind": "huruf_nida",
+      "irab_ar": "حرف نداء مبني على السكون",
+      "en": "O"
+    },
+    "هل": {
+      "class": "harf",
+      "kind": "huruf_istifham",
+      "irab_ar": "حرف استفهام مبني على السكون",
+      "en": "question marker"
+    },
+    "لم": {
+      "class": "harf",
+      "kind": "harf_jazm",
+      "irab_ar": "حرف نفي وجزم وقلب مبني على السكون",
+      "en": "not (past negation)"
+    },
+    "لا": {
+      "class": "harf",
+      "kind": "harf_jazm",
+      "sub": "nahy",
+      "irab_ar": "لا الناهية: حرف جازم مبني على السكون",
+      "en": "do not"
+    },
+    "ما": {
+      "class": "harf",
+      "kind": "ma_ambiguous",
+      "irab_ar": "حرف نفي مبني على السكون (وقد يكون استفهامًا)",
+      "en": "not / what"
+    },
+    "إذا": {
+      "class": "harf",
+      "kind": "adawat_shart_jazima",
+      "irab_ar": "حرف شرط جازم مبني على السكون",
+      "en": "if / when"
+    },
+    "لما": {
+      "class": "harf",
+      "kind": "harf_jazm",
+      "irab_ar": "حرف جزم (بغير همزة)",
+      "en": "not yet"
+    },
+    "إن": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+      "en": "indeed"
+    },
+    "أن": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+      "en": "that"
+    },
+    "كأن": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+      "en": "as if"
+    },
+    "لكن": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "irab_ar": "حرف توكيد ونصب مبني على الفتح",
+      "en": "but"
+    },
+    "ليت": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "purpose": [
+        "inshiyya",
+        "tamanni"
+      ],
+      "irab_ar": "حرف تمنٍّ ونصب مبني على الفتح",
+      "en": "would that"
+    },
+    "لعل": {
+      "class": "harf",
+      "kind": "nawasikh_inna",
+      "irab_ar": "حرف ترجٍّ ونصب مبني على الفتح",
+      "en": "perhaps"
+    },
+    "لولا": {
+      "class": "harf",
+      "kind": "dawakhil_la_mahal",
+      "irab_ar": "حرف شرط غير جازم داخل على المبتدأ والخبر بلا عمل",
+      "en": "were it not for"
+    },
+    "و": {
+      "class": "harf",
+      "kind": "huruf_atf",
+      "irab_ar": "حرف عطف",
+      "en": "and"
+    },
+    "ف": {
+      "class": "harf",
+      "kind": "huruf_atf",
+      "irab_ar": "حرف عطف",
+      "en": "and so"
+    },
+    "ثم": {
+      "class": "harf",
+      "kind": "huruf_atf",
+      "irab_ar": "حرف عطف",
+      "en": "then"
+    },
+    "أو": {
+      "class": "harf",
+      "kind": "huruf_atf",
+      "irab_ar": "حرف عطف",
+      "en": "or"
+    },
+    "بل": {
+      "class": "harf",
+      "kind": "huruf_atf",
+      "irab_ar": "حرف عطف",
+      "en": "rather"
+    },
+    "كان": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "كان",
+      "mudari": "يكون",
+      "transitive": false,
+      "en": "was"
+    },
+    "أصبح": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "أصبح",
+      "mudari": "يصبح",
+      "transitive": false,
+      "en": "became (morning)"
+    },
+    "صار": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "صار",
+      "mudari": "يصير",
+      "transitive": false,
+      "en": "became"
+    },
+    "ليس": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "ليس",
+      "transitive": false,
+      "en": "is not"
+    },
+    "ظل": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "ظلّ",
+      "mudari": "يظلّ",
+      "transitive": false,
+      "en": "kept on"
+    },
+    "بات": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "بات",
+      "mudari": "يبيت",
+      "transitive": false,
+      "en": "spent the night"
+    },
+    "مازال": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "ما زال",
+      "transitive": false,
+      "en": "kept on"
+    },
+    "ظن": {
+      "class": "fil",
+      "madi": "ظنّ",
+      "mudari": "يظنّ",
+      "transitive": true,
+      "ditransitive": true,
+      "en": "thought"
+    },
+    "علم": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "knowledge"
+    },
+    "وجد": {
+      "class": "fil",
+      "madi": "وَجَدَ",
+      "mudari": "يَجِدُ",
+      "transitive": true,
+      "en": "found"
+    },
+    "قرأ": {
+      "class": "fil",
+      "madi": "قرأ",
+      "mudari": "يقرأ",
+      "amr": "اقرأ",
+      "transitive": true,
+      "en": "read"
+    },
+    "كتب": {
+      "class": "fil",
+      "madi": "كتب",
+      "mudari": "يكتب",
+      "amr": "اكتب",
+      "madi_passive": "كُتِب",
+      "mudari_passive": "يُكتَب",
+      "transitive": true,
+      "en": "write"
+    },
+    "ذهب": {
+      "class": "fil",
+      "madi": "ذهب",
+      "mudari": "يذهب",
+      "transitive": false,
+      "en": "go"
+    },
+    "جاء": {
+      "class": "fil",
+      "madi": "جاء",
+      "mudari": "يأتي",
+      "transitive": false,
+      "en": "come"
+    },
+    "حضر": {
+      "class": "fil",
+      "madi": "حضر",
+      "mudari": "يحضر",
+      "transitive": false,
+      "en": "attend / come"
+    },
+    "خلق": {
+      "class": "fil",
+      "madi": "خلق",
+      "mudari": "يخلق",
+      "transitive": true,
+      "en": "create"
+    },
+    "نجح": {
+      "class": "fil",
+      "madi": "نجح",
+      "mudari": "ينجح",
+      "transitive": false,
+      "en": "succeed"
+    },
+    "أكرم": {
+      "class": "fil",
+      "madi": "أكرم",
+      "mudari": "يكرم",
+      "amr": "أكرم",
+      "transitive": true,
+      "en": "honour"
+    },
+    "أهمل": {
+      "class": "fil",
+      "madi": "أهمل",
+      "mudari": "تهمل",
+      "transitive": true,
+      "en": "neglect"
+    },
+    "اجتهد": {
+      "class": "fil",
+      "madi": "اجتهد",
+      "mudari": "يجتهد",
+      "amr": "اجتهد",
+      "transitive": false,
+      "en": "strive"
+    },
+    "اشترى": {
+      "class": "fil",
+      "madi": "اشترى",
+      "mudari": "يشتري",
+      "transitive": true,
+      "en": "buy"
+    },
+    "كتابة": {
+      "class": "ism",
+      "kind": "masdar",
+      "masdar": true,
+      "maful": "maful_mutlaq",
+      "gender": "f",
+      "number": "sing",
+      "en": "writing (masdar)"
+    },
+    "طلب": {
+      "class": "ism",
+      "kind": "masdar",
+      "masdar": true,
+      "maful": "maful_lajlihi",
+      "gender": "m",
+      "number": "sing",
+      "en": "seeking (masdar)"
+    },
+    "تفوق": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "excellence"
+    },
+    "عشرين": {
+      "class": "ism",
+      "kind": "number",
+      "tamyiz": true,
+      "ghayr_musarif": true,
+      "gender": "m",
+      "number": "pl",
+      "en": "twenty"
+    },
+    "كل": {
+      "class": "ism",
+      "kind": "zarf",
+      "gender": "m",
+      "number": "sing",
+      "en": "every / whole"
+    },
+    "يوم": {
+      "class": "ism",
+      "kind": "zarf",
+      "gender": "m",
+      "number": "sing",
+      "en": "day"
+    },
+    "تحت": {
+      "class": "ism",
+      "kind": "zarf",
+      "gender": "m",
+      "number": "sing",
+      "en": "under"
+    },
+    "شجرة": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "sing",
+      "en": "tree"
+    },
+    "قطع": {
+      "class": "fil",
+      "madi": "قطع",
+      "mudari": "يقطع",
+      "madi_passive": "قُطِع",
+      "transitive": true,
+      "en": "cut"
+    },
+    "حمل": {
+      "class": "fil",
+      "madi": "حمل",
+      "mudari": "يحمل",
+      "madi_passive": "حُمِل",
+      "transitive": true,
+      "en": "carry"
+    },
+    "سافر": {
+      "class": "fil",
+      "madi": "سافر",
+      "mudari": "يسافر",
+      "amr": "سافر",
+      "transitive": false,
+      "en": "travel"
+    },
+    "نزل": {
+      "class": "fil",
+      "madi": "نزل",
+      "mudari": "ينزل",
+      "transitive": true,
+      "en": "descend"
+    },
+    "نام": {
+      "class": "fil",
+      "madi": "نام",
+      "mudari": "ينام",
+      "transitive": false,
+      "en": "sleep"
+    },
+    "طالب": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "student"
+    },
+    "طلاب": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "pl",
+      "en": "students"
+    },
+    "تلميذ": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "pupil"
+    },
+    "كتاب": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "book"
+    },
+    "قرآن": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "Qur'an"
+    },
+    "الله": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "ghayr_musarif": true,
+      "en": "Allah"
+    },
+    "مسجد": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "mosque"
+    },
+    "قلم": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "pen"
+    },
+    "درس": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "lesson"
+    },
+    "دروس": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "pl",
+      "en": "lessons"
+    },
+    "زيد": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "Zayd (name)"
+    },
+    "عمر": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "'Amr (name)"
+    },
+    "محمد": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "Muhammad (name)"
+    },
+    "سماوات": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "pl",
+      "ghayr_musarif": true,
+      "en": "heavens"
+    },
+    "مسلم": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "Muslim"
+    },
+    "ولد": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "boy"
+    },
+    "دفتر": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "notebook"
+    },
+    "جو": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "weather"
+    },
+    "نور": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "light"
+    },
+    "صباح": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "morning"
+    },
+    "صابرين": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "pl",
+      "jam_mudhakkar_salim": true,
+      "en": "the patient ones (pl.)"
+    },
+    "ناس": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "pl",
+      "en": "people"
+    },
+    "أمة": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "sing",
+      "en": "community/nation"
+    },
+    "واحدة": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "f",
+      "number": "sing",
+      "en": "one"
+    },
+    "خالق": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "creator"
+    },
+    "شيء": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "thing"
+    },
+    "انما": {
+      "class": "harf",
+      "kind": "harf_tajrim_wa_tajzim",
+      "irab_ar": "حرف تجر الاسم وتجزم الفعل (وفائده الحصر)",
+      "en": "only / solely"
+    },
+    "اعمال": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "pl",
+      "en": "deeds"
+    },
+    "نيات": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "pl",
+      "en": "intentions"
+    },
+    "دين": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "religion"
+    },
+    "نصيحة": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "sing",
+      "en": "sincere advice"
+    },
+    "دنيا": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "f",
+      "number": "sing",
+      "en": "worldly life"
+    },
+    "سجن": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "prison"
+    },
+    "مؤمن": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "believer"
+    },
+    "حب": {
+      "class": "fil",
+      "madi": "حب",
+      "mudari": "يحب",
+      "transitive": true,
+      "en": "love"
+    },
+    "متوكل": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "pl",
+      "jam_mudhakkar_salim": true,
+      "en": "those who rely (pl.)"
+    },
+    "محسن": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "pl",
+      "jam_mudhakkar_salim": true,
+      "en": "the good-doers (pl.)"
+    },
+    "ذكر": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "the Reminder"
+    },
+    "عسى": {
+      "class": "fil",
+      "naqis": true,
+      "madi": "عسى",
+      "transitive": false,
+      "en": "may be (hope)"
+    },
+    "مطر": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "rain"
+    },
+    "نازل": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "falling"
+    },
+    "ظنن": {
+      "class": "fil",
+      "madi": "ظنن",
+      "mudari": "يظن",
+      "transitive": true,
+      "ditransitive": true,
+      "en": "think"
+    },
+    "رحم": {
+      "class": "fil",
+      "madi": "رحم",
+      "mudari": "يرحم",
+      "transitive": true,
+      "en": "have mercy"
+    },
+    "مجتهد": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "diligent"
+    },
+    "مفيد": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "useful"
+    },
+    "نافع": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "beneficial"
+    },
+    "جديد": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "new"
+    },
+    "جميل": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "beautiful"
+    },
+    "هذا": {
+      "class": "ism",
+      "kind": "ishara",
+      "mabni": true,
+      "gender": "m",
+      "number": "sing",
+      "en": "this"
+    },
+    "هذه": {
+      "class": "ism",
+      "kind": "ishara",
+      "mabni": true,
+      "gender": "f",
+      "number": "sing",
+      "en": "this (f)"
+    },
+    "ذلك": {
+      "class": "ism",
+      "kind": "ishara",
+      "mabni": true,
+      "gender": "m",
+      "number": "sing",
+      "en": "that"
+    },
+    "الذي": {
+      "class": "ism",
+      "kind": "mawsul",
+      "mabni": true,
+      "gender": "m",
+      "number": "sing",
+      "en": "who / which (m)"
+    },
+    "التي": {
+      "class": "ism",
+      "kind": "mawsul",
+      "mabni": true,
+      "gender": "f",
+      "number": "sing",
+      "en": "who / which (f)"
+    },
+    "الذين": {
+      "class": "ism",
+      "kind": "mawsul",
+      "mabni": true,
+      "gender": "m",
+      "number": "pl",
+      "en": "those who"
+    },
+    "هو": {
+      "class": "ism",
+      "kind": "damir",
+      "mabni": true,
+      "gender": "m",
+      "number": "sing",
+      "en": "he"
+    },
+    "هي": {
+      "class": "ism",
+      "kind": "damir",
+      "mabni": true,
+      "gender": "f",
+      "number": "sing",
+      "en": "she"
+    },
+    "أنا": {
+      "class": "ism",
+      "kind": "damir",
+      "mabni": true,
+      "en": "I"
+    },
+    "نحن": {
+      "class": "ism",
+      "kind": "damir",
+      "mabni": true,
+      "en": "we"
+    },
+    "مَن": {
+      "class": "ism",
+      "kind": "istifham",
+      "mabni": true,
+      "special": "q_man",
+      "en": "who?"
+    },
+    "أين": {
+      "class": "ism",
+      "kind": "istifham",
+      "mabni": true,
+      "special": "q_zarf",
+      "en": "where?"
+    },
+    "متى": {
+      "class": "ism",
+      "kind": "istifham",
+      "mabni": true,
+      "special": "q_zarf",
+      "en": "when?"
+    },
+    "كيف": {
+      "class": "ism",
+      "kind": "istifham",
+      "mabni": true,
+      "special": "q_zarf",
+      "en": "how?"
+    },
+    "اليوم": {
+      "class": "ism",
+      "kind": "zarf",
+      "gender": "m",
+      "number": "sing",
+      "en": "today"
+    },
+    "الآن": {
+      "class": "ism",
+      "kind": "zarf",
+      "mabni": true,
+      "en": "now"
+    },
+    "ليل": {
+      "class": "ism",
+      "kind": "zarf",
+      "gender": "m",
+      "number": "sing",
+      "en": "night"
+    },
+    "حمد": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "praise"
+    },
+    "خير": {
+      "class": "ism",
+      "kind": "sifa",
+      "gender": "m",
+      "number": "sing",
+      "en": "better/good"
+    },
+    "نوم": {
+      "class": "ism",
+      "kind": "zahir",
+      "gender": "m",
+      "number": "sing",
+      "en": "sleep"
+    }
+  }
+}

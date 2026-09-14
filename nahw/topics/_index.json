@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "name_ar": "فهرس الوحدات الموضوعية",
+    "name_en": "Topics index",
+    "version": "1.0.0",
+    "purpose_en": "Each module groups detailed sentence-type topics (composition, components, conditions, rulings, full i'rab with facets, and shawahid from Quran & Sunnah). The student studies them in order after the graded curriculum.",
+    "modules": [
+      {
+        "file": "module1_jumla_ismiyya_naqisa.json",
+        "topics": [
+          "topic_jumla_ismiyya",
+          "topic_naqisa"
+        ],
+        "covers_ar": "الجملة الاسمية بأركانها وأنواع الخبر ومحالّه + الناقصة (كان وأخواتها): تركيبها وشروطها وضوابطها وكيف تدخل في الجملة التامة"
+      },
+      {
+        "file": "module2_filiyya_amr_nahy.json",
+        "topics": [
+          "topic_jumla_filiyya",
+          "topic_amr_nahy"
+        ],
+        "covers_ar": "الجملة الفعلية بأركانها ومفاعيلها ومستترها + جملتا الأمر والنهي: صيغهما وشروطهما وجوابهما"
+      },
+      {
+        "file": "module3_inshiyya_qasam.json",
+        "topics": [
+          "topic_inshiyya",
+          "topic_qasam"
+        ],
+        "covers_ar": "الجملة الإنشائية وأنواعها + القسم تفصيلًا: أدواته واسمه وجوابه (مقترن باللام لا محل له / غير مقترن في محل جزم أو جر / محذوف متعلق بفعل)"
+      },
+      {
+        "file": "module4_zarf_hal.json",
+        "topics": [
+          "topic_zarf",
+          "topic_hal"
+        ],
+        "covers_ar": "الظرف (زمان/مكان، تعلقه ومضافه) + الحال (أنواعها وصاحبها وشروطها)"
+      },
+      {
+        "file": "module5_tawaabiat_idafa.json",
+        "topics": [
+          "topic_tawaabiat",
+          "topic_idafa"
+        ],
+        "covers_ar": "التوابع (نعت/عطف بيان/بدل/توكيد) بشروطها وضوابطها + الإضافة وسلسلتها وحذفها وتأنيثها"
+      },
+      {
+        "file": "module6_ahkam_wujuh_atf_jawab.json",
+        "topics": [
+          "topic_mabni_musarif",
+          "topic_wujuh_irab",
+          "topic_atf_jawab"
+        ],
+        "covers_ar": "مبني/معرب ومصرف/غير مصرف وشروطهما وأحكامهما في الجملة + وجوه الإعراب (بالحرف/الحركة/الحذف) بتأثرها بالرافع والناصب والجار + حروف العطف والجواب"
+      },
+      {
+        "file": "module7_damair_asma.json",
+        "topics": [
+          "topic_damair",
+          "topic_ishara",
+          "topic_mawsula",
+          "topic_asma_khamsa"
+        ],
+        "covers_ar": "الضمائر (منفصلة/متصلة/مستترة) + أسماء الإشارة (والمركبة وهاء التنبيه) + الموصولة (وصلتها وشروطها) + الأسماء الخمسة (شروط العمل بالحروف وخروجها)"
+      },
+      {
+        "file": "module8_adad_lamahal_hazf.json",
+        "topics": [
+          "topic_adad",
+          "topic_la_mahal",
+          "topic_munada_types",
+          "topic_istithna_types",
+          "topic_nat_detail",
+          "topic_hazf_taqdir"
+        ],
+        "covers_ar": "العدد والمعدود بكل قواعده + الجمل التي لا محل لها (سبع) + المنادى (خمسة أنواع) + الاستثناء (أربعة) + النعت تفصيلًا + الحذف والتقدير"
+      },
+      {
+        "file": "module9_tawkid_taqdim_masdar.json",
+        "topics": [
+          "topic_tawkid_detail",
+          "topic_taqdim_takhir",
+          "topic_masdar"
+        ],
+        "covers_ar": "التوكيد (لفظي ومعنوي) + التقديم والتأخير (خبر مقدم، مبتدأ مؤخر، اسم كان مؤخر) + المصدر (مطلق/ميمي/مؤول)"
+      }
+    ],
+    "schema_fields": {
+      "composition_ar": "كيف يتكون الموضوع (أدواته وأركانه وصيغه)",
+      "shurut_ar": "شروطه",
+      "dawabit_ar": "ضوابطه وأحكامه في الجملة",
+      "irab_details": "تفصيل إعراب كل عنصر بعلاماته",
+      "wujuh_irab": "وجوه الإعراب ومتى تقع",
+      "enters_into_ar": "كيف يدخل الموضوع في جملة أكبر (الناقصة في التامة، القسم متعلقًا بفعل...)",
+      "shawahid": "أمثلة من القرآن والسنة — أو نموذجية موسومة بذلك"
+    }
+  }
+}

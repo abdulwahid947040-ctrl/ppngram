@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name_ar": "خريطة الطريق الكاملة لتعلم التركيب والإعراب",
+    "name_en": "Complete roadmap to mastering tarkeeb & sentence structure",
+    "version": "1.0.0",
+    "purpose_en": "The master map: six study stages that walk the student from zero to full mastery, each stage pointing to the exact artifacts (curriculum levels, topic modules, awamil, rules, corpus sentences). At the top: the six-question checklist the student asks of ANY sentence — so the structure lives in the mind before the eyes.",
+    "goal_ar": "لا جملة يرى الطالبَ إلا ويعرف بنيتها: نوعها، وعاملها، وأركانها، وزوائدها، ومحالّ عناصرها وعلاماتها، ومحلها الكلي."
+  },
+  "mental_checklist": {
+    "name_ar": "أسئلة الجملة الستة (يُجيب عنها الطالب في أي جملة)",
+    "name_en": "The six questions for any sentence",
+    "questions_ar": [
+      {"n": 1, "q_ar": "ما نوع هذه الجملة؟", "how_ar": "انظر إلى أول الكلام: اسم (اسمية) — فعل (فعلية) — أداة إنشائية (إنشائية: أمر/نهي/استفهام/تمني/نداء/تعجب/قسم/مدح وذم)", "see": "topic_jumla_ismiyya, topic_jumla_filiyya, topic_inshiyya"},
+      {"n": 2, "q_ar": "ما عاملها وأداتها؟", "how_ar": "ابحث عن العامل اللفظي (فعل/حرف) أو المعنوي (إضافة/ظرفية) — وراجع سلاسل المواضع: ما يأتي على كل موضع؟", "see": "awamil.json, awamil.json#chains"},
+      {"n": 3, "q_ar": "ما أركانها؟", "how_ar": "الاسمية: مبتدأ + خبر — الفعلية: فعل + فاعل (+ مفعول) — الناقصة: ناسخ + اسم + خبر — القسم: أداة + اسم + جواب", "see": "topic_jumla_ismiyya, topic_jumla_filiyya, topic_naqisa, topic_qasam"},
+      {"n": 4, "q_ar": "ما زوائدها ومكملاتها؟", "how_ar": "التوابع (نعت/عطف/بدل/توكيد) + الظرف والحال + الجار والمجرور + العدد والتمييز + الشواهد المصدرية", "see": "topic_tawaabiat, topic_zarf, topic_hal, topic_adad, topic_idafa"},
+      {"n": 5, "q_ar": "ما محالّ عناصرها وعلاماتها؟", "how_ar": "لكل كلمة: موضعها (مرفوع/منصوب/مجرور/مجزوم) وعلامتها (حركة/حرف/حذف/مبني في محل) — متأثرة بالرافع والناصب والجار", "see": "positions.json, topic_wujuh_irab, topic_mabni_musarif"},
+      {"n": 6, "q_ar": "ما محل الجملة كلها؟", "how_ar": "الجملة الكبيرة قد تجلس في محل: رفع (خبر) أو نصب (حال/نعت) أو جر (جواب قسم) أو جزم (جواب شرط) أو لا محل لها", "see": "topic_la_mahal, taxonomy#jumla.mahall"}
+    ]
+  },
+  "stages": [
+    {
+      "id": "stage_1_tamhid",
+      "ar": "المرحلة الأولى: التمهيد — البنية الكبرى",
+      "en": "Stage 1: orientation — the grand structure",
+      "outcome_ar": "يعرف الطالب: الكلام، والجملة وأقسامها، والكلمة الثلاثة، والمعرب والمبني والمصرف وغير المصرف في خط عام.",
+      "study_ar": [
+        "شجرة الكلام والجملة والكلمة: taxonomy.json (kalam, jumla, kalima)",
+        "أنواع الإعراب الأربعة ومحالّ الجملة: taxonomy.json#jumla.mahall + topic_wujuh_irab",
+        "المبني ١٥ نوعًا والمصرف وغير المصرف: topic_mabni_musarif"
+      ],
+      "refs": {"curriculum": [], "topics": ["topic_mabni_musarif", "topic_wujuh_irab"], "rules": ["B_mabni", "B_musarif", "B_ghayr_musarif"], "awamil": [], "sentences": []}
+    },
+    {
+      "id": "stage_2_usul",
+      "ar": "المرحلة الثانية: الأساس — أصغر الجمل وأول العوامل",
+      "en": "Stage 2: foundations — smallest sentences, first awamil",
+      "outcome_ar": "يركّب ويُعرب أصغر جملة اسمية وفعلية، ويعرف الفاعل والمفعول بالعلامات الأربع والخمس.",
+      "study_ar": [
+        "المستويات L01–L05 (curriculum.json) — العلمُ نورٌ ← الطالبُ يقرأُ الكتابَ",
+        "العوامل الأولى: fil_lazim, fil_mutaadi, fil_mutaadi_lmafulain, fil_majhul, fil_amr",
+        "القواعد: R_nominal, R_fil_lazim, R_fil_mutaadi, R_fil_mutaadi_lmafulain, R_fil_majhul, R_fil_amr",
+        "العلامات: علامات الرفع الأربع وعلامات النصب الخمس (positions.json)"
+      ],
+      "refs": {"curriculum": ["L01", "L02", "L05"], "topics": ["topic_jumla_ismiyya", "topic_jumla_filiyya", "topic_amr_nahy"], "rules": ["R_nominal", "R_fil_lazim", "R_fil_mutaadi", "R_fil_mutaadi_lmafulain", "R_fil_majhul", "R_fil_amr"], "awamil": ["fil_lazim", "fil_mutaadi", "fil_mutaadi_lmafulain", "fil_majhul", "fil_amr"], "sentences": ["S001", "S021", "S032", "S037"]}
+    },
+    {
+      "id": "stage_3_zawaid",
+      "ar": "المرحلة الثالثة: الزوائد — كيف تكبر الجملة",
+      "en": "Stage 3: growth — how the sentence grows",
+      "outcome_ar": "يكبّر الطالب الجملة بشبه الجملة والإضافة والتوابع والظرف والحال — ويعرف ضوابط كل تابع.",
+      "study_ar": [
+        "المستويات L03–L04، L06–L08",
+        "الوحدات: module4 (الظرف والحال)، module5 (التوابع والإضافة)، module3 (الإنشائية)",
+        "العوامل: harf_jarr, idafa, zarfiyya, harf_atf, waw_maiyya",
+        "القواعد: R_jarr, R_idafa, R_tawaabi, R_waw_maiyya, R_adad_tamyiz"
+      ],
+      "refs": {"curriculum": ["L03", "L04", "L06", "L07", "L08"], "topics": ["topic_zarf", "topic_hal", "topic_tawaabiat", "topic_idafa", "topic_nat_detail"], "rules": ["R_jarr", "R_idafa", "R_tawaabi", "R_waw_maiyya", "R_adad_tamyiz"], "awamil": ["harf_jarr", "idafa", "zarfiyya", "harf_atf", "waw_maiyya"], "sentences": ["S005", "S023", "S024", "S028", "S029", "S035", "S038"]}
+    },
+    {
+      "id": "stage_4_nawasikh",
+      "ar": "المرحلة الرابعة: النواسخ — الجملة الناقصة",
+      "en": "Stage 4: the defective verbs (nawasikh)",
+      "outcome_ar": "يعرف كان وأخواتها وإنّ وأخواتها وظنّ وأفعال القلوب: شروطها، وخروجها عن العمل، وكيف تدخل في الجملة التامة.",
+      "study_ar": [
+        "المستوى L09 + الوحدة الأولى (topic_naqisa كاملًا)",
+        "العوامل: kana_group, inna_group, zann_group, dawakhil_la_mahal",
+        "القواعد: R_kana, R_inna, R_zann, R_damir_fasl",
+        "الشواهد: كَانَ النَّاسُ أُمَّةً وَاحِدَةً / إِنَّ اللَّهَ مَعَ الصَّابِرِينَ / كانت امرأةٌ تهراق الدماء"
+      ],
+      "refs": {"curriculum": ["L09"], "topics": ["topic_naqisa", "topic_jumla_ismiyya"], "rules": ["R_kana", "R_inna", "R_zann", "R_damir_fasl"], "awamil": ["kana_group", "inna_group", "zann_group", "dawakhil_la_mahal"], "sentences": ["S003", "S004", "S015", "S030", "S033", "S034"]}
+    },
+    {
+      "id": "stage_5_asalib",
+      "ar": "المرحلة الخامسة: الأساليب والأحكام",
+      "en": "Stage 5: styles & rulings",
+      "outcome_ar": "يتقن الطالب أساليب القسم والأمر والنهي والاستفهام والتمني والنداء، والعدد والجمل التي لا محل لها، والضمائر وما شابهها.",
+      "study_ar": [
+        "المستويات L10–L14 + الوحدات: module3 (القسم تفصيلًا)، module2 (الأمر والنهي)، module8 (العدد، لا محل لها، المنادى، الاستثناء)",
+        "العوامل: harf_jazm, adawat_shart, lam_qasam, harf_nida, harf_istithna, tajrim_wa_tajzim, harf_nafiya, harf_nasb",
+        "القواعد: R_jazm_mudari, R_nasb_mudari, R_shart, R_lam_qasam, R_nida, R_istithna, R_ma_nafiya",
+        "الضمائر وأسماء الإشارة والموصولة والأسماء الخمسة: module7 كاملًا"
+      ],
+      "refs": {"curriculum": ["L10", "L11", "L12", "L13", "L14"], "topics": ["topic_qasam", "topic_amr_nahy", "topic_adad", "topic_la_mahal", "topic_munada_types", "topic_istithna_types", "topic_damair", "topic_ishara", "topic_mawsula", "topic_asma_khamsa", "topic_atf_jawab"], "rules": ["R_jazm_mudari", "R_nasb_mudari", "R_shart", "R_lam_qasam", "R_nida", "R_istithna", "R_ma_nafiya"], "awamil": ["harf_jazm", "adawat_shart", "lam_qasam", "harf_nida", "harf_istithna", "tajrim_wa_tajzim", "harf_nafiya", "harf_nasb"], "sentences": ["S011", "S013", "S016", "S017", "S018", "S025", "S030", "S036"]}
+    },
+    {
+      "id": "stage_6_tatbiq",
+      "ar": "المرحلة السادسة: التطبيق والإتقان",
+      "en": "Stage 6: application & mastery",
+      "outcome_ar": "يعطي الطالب أي جملة إعرابها كاملًا ومحلّها الكلي — ويضيف أمثلة جديدة إلى البيانات فيثريها.",
+      "study_ar": [
+        "فكّك كل الجمل الـ38 في sentences.json (python3 nahw/tarkeeb.py corpus)",
+        "راجع الستة أسئلة في كل جملة (mental_checklist أعلاه)",
+        "أضف آيات وأحاديث جديدة: python3 nahw/fetch_examples.py candidate <ref>",
+        "وسع المعجم والقواعد: lexicon.json, rules.json",
+        "جرّب بنفسك: python3 nahw/tarkeeb.py parse \"...\" ثم test"
+      ],
+      "refs": {"curriculum": ["L15"], "topics": [], "rules": [], "awamil": [], "sentences": ["S029"]}
+    }
+  ],
+  "coverage_checklist_en": "Nahw domains covered end-to-end: sentence types (nominal/verbal/performative incl. qasam, amr, nahy, istifham, tamanni, nida, ta'ajjub, madh/dhamm) — defective verbs (kana/inna/zann groups with entry/exit conditions) — all 34 positions with 15 signs — followers (nat/atf-bayan/badal/atf/tawkid) with clauses & phrases as followers — idafa (incl. chains, deletion, ta'nith) — zarf & hal (all types) — numbers & tamyiz — pronouns/demonstratives/relatives/five nouns — mabni(15)/musarif/ghayr musarif(10) — wujuh irab (letter/vowel/deletion) — conjunctions & answers (shart/qasam/nahy) — clauses without position (7 types) — deletion & estimation."
+}

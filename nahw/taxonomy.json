@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "name_ar": "شجرة تصنيف النحو العربي",
+    "name_en": "Arabic nahw taxonomy",
+    "version": "1.0.0",
+    "purpose_en": "Machine-readable tree of Arabic nahw categories, organized after the classical primers (al-Ajurrumiyyah, al-Kafiyah, Hidayat al-Nahw). Stable ids here are referenced by positions.json, lexicon.json and sentences.json.",
+    "node_fields": {
+      "id": "stable identifier (snake_case ASCII)",
+      "ar": "Arabic term",
+      "en": "English gloss",
+      "def_ar": "Arabic definition (optional)",
+      "def_en": "English definition (optional)",
+      "examples_ar": ["short illustrative examples"],
+      "facets": "optional cross-cutting classifications (each facet is a list of nodes)",
+      "children": "nested nodes"
+    }
+  },
+  "kalam": {
+    "id": "kalam",
+    "ar": "الكلام",
+    "en": "utterance, speech",
+    "def_ar": "ما يُرَكَّب من كلمتين فأكثر فيفيد معنى تامًّا يُقطع بالسكوت",
+    "def_en": "Two or more words combined so as to yield a complete, self-contained meaning.",
+    "children": [
+      {
+        "id": "ghayr_lafzi",
+        "ar": "غير لفظي",
+        "en": "non-verbal speech",
+        "def_ar": "ما ليس لفظًا مسموعًا ولا كتابة مقروءة",
+        "children": [
+          {"id": "imaai", "ar": "إيمائي", "en": "gestured (nodding)"},
+          {"id": "ishari", "ar": "إشاري", "en": "pointed (signs)"}
+        ]
+      },
+      {
+        "id": "lafzi",
+        "ar": "لفظي",
+        "en": "verbal speech",
+        "def_ar": "ما كان لفظًا مسموعًا أو كتابة مقروءة",
+        "children": [
+          {"id": "qawli", "ar": "قولي", "en": "spoken"},
+          {"id": "kitabi", "ar": "كتابي", "en": "written"}
+        ]
+      },
+      {
+        "id": "jumla",
+        "ar": "الجملة",
+        "en": "sentence",
+        "def_ar": "كلام مركب من كلمتين فأكثر يؤلّف مع بعضه معنى تامًّا",
+        "facets": {
+          "structure": [
+            {
+              "id": "jumla_ismiyya",
+              "ar": "الجملة الاسمية",
+              "en": "nominal sentence",
+              "def_ar": "التي تُبتدأ باسم",
+              "arkan_ar": ["مبتدأ", "خبر"],
+              "examples_ar": ["الطالبُ مجتهدٌ", "القرآنُ كتابُ اللهِ"]
+            },
+            {
+              "id": "jumla_filiyya",
+              "ar": "الجملة الفعلية",
+              "en": "verbal sentence",
+              "def_ar": "التي تُبتدأ بفعل",
+              "arkan_ar": ["فعل", "فاعل", "مفعول به (إن كان الفعل متعديًا)"],
+              "examples_ar": ["نجحَ الطالبُ", "قرأَ الطالبُ الكتابَ"]
+            }
+          ],
+          "purpose": [
+            {
+              "id": "jumla_khabariyya",
+              "ar": "خبرية",
+              "en": "declarative",
+              "def_ar": "يكون صدقها أو كذبها ممكنًا (تشمل الجمل المنفية بـ«ما» و«لم»)",
+              "examples_ar": ["الشمسُ ساطعةٌ", "لم يكتبِ الطالبُ"]
+            },
+            {
+              "id": "jumla_inshiyya",
+              "ar": "إنشائية",
+              "en": "performative",
+              "def_ar": "لا يصح فيها الصدق ولا الكذب",
+              "types": [
+                {"id": "amr", "ar": "أمر", "en": "command", "examples_ar": ["اقرأْ الكتابَ"]},
+                {"id": "nahy", "ar": "نهي", "en": "prohibition", "examples_ar": ["لا تُهملْ دروسَك"]},
+                {"id": "istifham", "ar": "استفهام", "en": "interrogation", "examples_ar": ["أين الكتابُ؟"]},
+                {"id": "tamanni", "ar": "تمنٍّ", "en": "wishing", "examples_ar": ["ليت للعلمِ بابًا"]},
+                {"id": "nida", "ar": "نداء", "en": "vocative", "examples_ar": ["يا محمدُ"]},
+                {"id": "tajassum", "ar": "تعجب", "en": "marveling", "examples_ar": ["ما أجملَ العلمَ!"]},
+                {"id": "qasam", "ar": "قسم", "en": "oath", "examples_ar": ["واللهِ"]},
+                {"id": "madh_wa_dhamm", "ar": "مدح وذم", "en": "praise and blame", "examples_ar": ["نِعْمَ الزيدُ", "بئسَ السميعُ"]}
+              ]
+            },
+            {
+              "id": "jumla_shartiyya",
+              "ar": "شرطية",
+              "en": "conditional (compound sentence)",
+              "def_ar": "جملة مركبة من فعل الشرط وجوابه، ويجزم مضارعها بأدوات الشرط الجازمة",
+              "examples_ar": ["إن تجتهدْ تنجحْ", "إذا جاء المسلمُ فأكرمْهُ"]
+            }
+          ],
+          "mahall": [
+            {
+              "id": "jumla_fi_mahal_raf",
+              "ar": "جملة في محل رفع",
+              "en": "sentence in nominative position",
+              "cases_ar": ["خبر المبتدأ", "خبر إنّ"],
+              "examples_ar": ["الطالبُ يقرأُ الكتابَ", "إنّ العلمَ ينفعُ صاحبَه"]
+            },
+            {
+              "id": "jumla_fi_mahal_nasb",
+              "ar": "جملة في محل نصب",
+              "en": "sentence in accusative position",
+              "cases_ar": ["الحال", "نعت (صلّة الموصول)", "المفعول به الثاني (كما مع ظنّ وأخواتها)"],
+              "examples_ar": ["جاء الطالبُ يبتسمُ", "الطالبُ الذي نجحَ ...", "ظننتُ العلمَ ينفعُ"]
+            },
+            {
+              "id": "jumla_fi_mahal_jarr",
+              "ar": "جملة في محل جر",
+              "en": "sentence in genitive position",
+              "cases_ar": ["جواب القسم غير المقترن باللام"],
+              "examples_ar": ["واللهِ لأخبرنَّكَ"]
+            },
+            {
+              "id": "jumla_fi_mahal_jazm",
+              "ar": "جملة في محل جزم",
+              "en": "sentence in jussive position",
+              "cases_ar": ["جواب الشرط الجازم غير المقترن بالفاء"],
+              "examples_ar": ["من اجتهدْ نجا"]
+            },
+            {
+              "id": "jumla_la_mahal_laha",
+              "ar": "جملة لا محل لها",
+              "en": "sentence with no syntactic position",
+              "types_ar": ["ابتدائية", "اعتراضية", "تفسيرية", "جواب الشرط المقترن بالفاء", "جواب القسم المقترن باللام", "التابعة لجملة لا محل لها"],
+              "examples_ar": ["كان — كما قلتُ — مجتهدًا", "إذا جاء المسلمُ فأكرمْهُ"]
+            }
+          ]
+        }
+      },
+      {
+        "id": "shibh_jumla",
+        "ar": "شبه الجملة",
+        "en": "quasi-sentence",
+        "def_ar": "ما ليس جملة ولا مفردًا، وتتمتع بأركان الجملة ولا تستغني بغيرها، وهي متعلقة بعامل لفظي أو محذوف",
+        "def_en": "A phrase that is neither a full sentence nor a single word; always connected to a governing word (or an understood one).",
+        "notes_ar": ["في محل نصب دائمًا إذ هي متعلقة بعامل"],
+        "children": [
+          {"id": "shibh_zarfiyya", "ar": "ظرفية", "en": "adverbial phrase", "examples_ar": ["تحتَ الشجرةِ", "قبلَ الظهرِ"]},
+          {"id": "shibh_jarriyya", "ar": "جرية (جار ومجرور)", "en": "prepositional phrase", "examples_ar": ["إلى المسجدِ", "بِالقلمِ"]}
+        ]
+      }
+    ]
+  },
+  "kalima": {
+    "id": "kalima",
+    "ar": "الكلمة",
+    "en": "word",
+    "def_ar": "اللفظ الدال على معنى مفرد",
+    "children": [
+      {
+        "id": "ism",
+        "ar": "الاسم",
+        "en": "noun",
+        "def_ar": "كلمة تدل على معنى في نفسها ولا تقترن بزمن",
+        "signs_ar": ["يقبل أل التعريف", "يقبل التنوين", "يُنادى", "يُجر بالكسرة أو ما ينوب عنها"],
+        "facets": {
+          "irab": [
+            {"id": "ism_musarif", "ar": "مصرف (معرب)", "en": "fully declinable", "def_ar": "يُرفع بالضمة ويُنصب بالفتحة ويُجر بالكسرة", "examples_ar": ["كتاب", "طالب"]},
+            {"id": "ism_ghayr_musarif", "ar": "غير مصرف (ممنوع من الصرف)", "en": "diptote", "def_ar": "يُرفع بالضمة ويُنصب ويُجر بالفتحة, ولا يقبل التنوين",
+             "types_ar": ["العلم: أعجمي مختوم بألف ممدودة (أحمد، مصطفى)", "العلم: مختوم بألف ونون (عثمان، مرّوان)", "العلم: مختوم بتاء على وزن فَعَل (حمزة، حنظلة)", "الصفة على وزن أفعل (أحمر، أفضل)", "ما جُزم من الصفة المشبهة (كسلان، سكران، عطشان)", "الجمع: منتهى الجموع (مساجد، مصابيح)", "جمع ما كان على مَفْعَل أو مَفْعِل (معاليج، مكاتيب)", "اسم المفعول من غير الثلاثي (مُجمَّع، مرتاض)", "المصدر الميمي من غير الثلاثي (مجيء، إعطاء)", "المصدر على وزن فَعَل (قُبح، حُسن)"],
+             "examples_ar": ["أحمدُ", "عثمانَ", "أحمرَ", "مساجدَ", "مجيءً", "قُبحً"]}
+          ],
+          "ishtiqaq": [
+            {"id": "jamid", "ar": "جامد", "en": "primitive noun", "def_ar": "ما ليس مشتقًّا من غيره", "examples_ar": ["قمر", "بيت"]},
+            {
+              "id": "mushtaq",
+              "ar": "مشتق",
+              "en": "derivative noun",
+              "def_ar": "ما أخذ من أصل آخر",
+              "types": [
+                {"id": "ism_fail", "ar": "اسم الفاعل", "en": "active participle", "examples_ar": ["كاتب", "قارئ"]},
+                {"id": "ism_mafuul", "ar": "اسم المفعول", "en": "passive participle", "examples_ar": ["مكتوب", "مقرؤ"]},
+                {"id": "sifa_mushabbaha", "ar": "الصفة المشبهة", "en": "quasi-participle", "examples_ar": ["كريم", "جميل"]},
+                {"id": "ism_tafdil", "ar": "اسم التفضيل", "en": "elative", "examples_ar": ["أفضل", "أعلم"]},
+                {"id": "ism_mubalagha", "ar": "صيغ المبالغة", "en": "intensive forms", "types_ar": ["فَعَّال", "مِفْعال", "فَعُول", "فَعِيل", "فَعِل"], "examples_ar": ["غفّار", "مِقدام", "صبور", "سميع", "حَذِر"]},
+                {"id": "ism_alah", "ar": "اسم الآلة", "en": "instrument noun", "examples_ar": ["مفتاح", "سكّين"]},
+                {"id": "ism_makan", "ar": "اسم المكان", "en": "place noun", "examples_ar": ["مدرسة", "ملعب"]},
+                {"id": "ism_zaman", "ar": "اسم الزمان", "en": "time noun", "examples_ar": ["موعود", "مغرب"]},
+                {"id": "ism_marrah", "ar": "اسم المرة", "en": "noun of instance", "examples_ar": ["جلْسة", "وقْفة"]},
+                {"id": "ism_hayah", "ar": "اسم الهيئة", "en": "noun of manner", "examples_ar": ["جلوسة", "وقوفة"]}
+              ]
+            }
+          ],
+          "number": [
+            {"id": "mufrad", "ar": "مفرد", "en": "singular"},
+            {"id": "muthanna", "ar": "مثنى", "en": "dual", "raf_sign_ar": "الألف", "nasb_jarr_sign_ar": "الياء"},
+            {
+              "id": "jam",
+              "ar": "جمع",
+              "en": "plural",
+              "types": [
+                {"id": "jam_mudhakkar_salim", "ar": "جمع المذكر السالم", "en": "sound masculine plural", "raf_sign_ar": "الواو", "nasb_jarr_sign_ar": "الياء"},
+                {"id": "jam_muannath_salim", "ar": "جمع المؤنث السالم", "en": "sound feminine plural", "raf_sign_ar": "الضمة", "nasb_sign_ar": "الكسرة", "jarr_sign_ar": "الكسرة"},
+                {"id": "jam_taksir", "ar": "جمع التكسير", "en": "broken plural"}
+              ]
+            }
+          ],
+          "gender": [
+            {"id": "mudhakkar", "ar": "مذكر", "en": "masculine"},
+            {"id": "muannath", "ar": "مؤنث", "en": "feminine", "types_ar": ["حقيقي", "مجازي"]}
+          ],
+          "marifa_wa_nakira": [
+            {"id": "marifa", "ar": "معرفة", "en": "definite", "types_ar": ["ضمير", "اسم إشارة", "اسم موصول", "علم", "معرّف بـ«أل»"]},
+            {"id": "nakira", "ar": "نكرة", "en": "indefinite"}
+          ],
+          "mabniyat": [
+            {"id": "damair", "ar": "الضمائر", "en": "pronouns", "types_ar": ["منفصلة", "متصلة", "مستترة"]},
+            {"id": "asma_ishara", "ar": "أسماء الإشارة", "en": "demonstratives", "examples_ar": ["هذا", "هذه", "ذلك", "هؤلاء"]},
+            {"id": "asma_mawsula", "ar": "الأسماء الموصولة", "en": "relative pronouns", "examples_ar": ["الذي", "التي", "اللذان", "الذين", "اللاتي", "من", "ما"]},
+            {"id": "asma_afal", "ar": "أسماء الأفعال", "en": "verb-like nouns", "examples_ar": ["صهْ", "طفْ", "عَمْ", "رُوَيْدَ", "حَيَّ", "شَتَّانَ"]},
+            {"id": "zuruf_makan_zaman", "ar": "ظروف المكان والزمان", "en": "adverbs of place and time", "examples_ar": ["تحت", "خلف", "حين", "الآن", "إذ", "أمس", "قط"]},
+            {"id": "kalimat_shart", "ar": "كلمات الشرط", "en": "conditional words", "examples_ar": ["إن", "من", "ما", "مهما", "متى", "أين", "كيفما"]},
+            {"id": "kalimat_istifham", "ar": "كلمات الاستفهام", "en": "interrogative words", "examples_ar": ["أ", "هل", "مَن", "ما", "متى", "أين", "كيف", "كم"]},
+            {"id": "kalimat_duaa", "ar": "كلمات الدعاء", "en": "invocation words", "examples_ar": ["هيّة", "رُوَيْدَك", "عليك"]},
+            {"id": "harf_atf", "ar": "حروف العطف", "en": "conjunctions", "examples_ar": ["الواو", "الفاء", "ثمّ", "أو", "بل", "لا"]},
+            {"id": "mabni_harf_jarr", "ar": "حروف الجر", "en": "prepositions", "examples_ar": ["من", "إلى", "عن", "على", "في", "الباء", "الكاف", "اللام", "ربّ"]},
+            {"id": "mabni_harf_nasb", "ar": "حروف النصب", "en": "accusative particles", "examples_ar": ["أن", "لن", "كي", "حتى", "إذن"]},
+            {"id": "mabni_harf_jazm", "ar": "حروف الجزم", "en": "jussive particles", "examples_ar": ["لم", "لمّا", "لا الناهية", "لام الأمر"]},
+            {"id": "adawat_istithna", "ar": "أدوات الاستثناء", "en": "exception particles", "examples_ar": ["إلا", "غير", "سوى", "عدا", "خلا", "حاشا"]},
+            {"id": "harf_nida", "ar": "حروف النداء", "en": "vocative particles", "examples_ar": ["يا", "أيا", "هيا", "أ", "وا"]},
+            {"id": "asma_khamsa_mabniya", "ar": "الأسماء الخمسة المبنية", "en": "the five built nouns", "examples_ar": ["هذا", "ذا", "غير", "كذا", "بعض"]}
+          ]
+        }
+      },
+      {
+        "id": "fil",
+        "ar": "الفعل",
+        "en": "verb",
+        "def_ar": "كلمة تدل على حدث مقرون بزمن",
+        "facets": {
+          "zaman": [
+            {"id": "madi", "ar": "الماضي", "en": "past", "sign_ar": "يقبل تاء التأنيث الساكنة وواو الجماعة", "examples_ar": ["قرأ", "كتبت"]},
+            {"id": "mudari", "ar": "المضارع", "en": "present / future", "sign_ar": "يبدأ بأحد حروف (أيْمتن)", "examples_ar": ["يقرأ", "أكتب"]},
+            {"id": "fil_amr", "ar": "الأمر", "en": "imperative", "sign_ar": "يقبل نون التوكيد وياء المخاطبة", "examples_ar": ["اقرأْ", "اكتبْ"]}
+          ],
+          "tasarruf": [
+            {"id": "mutasarrif", "ar": "متصرف", "en": "fully conjugable"},
+            {"id": "ghayr_mutasarrif", "ar": "غير متصرف", "en": "non-conjugable", "types_ar": ["جامد", "ناقص"]}
+          ],
+          "lazim_wa_mutaadi": [
+            {"id": "lazim", "ar": "لازم", "en": "intransitive", "def_ar": "يكتفي بفاعله ولا ينصب مفعولًا", "examples_ar": ["ذهب", "نام"]},
+            {"id": "mutaadi", "ar": "متعدي", "en": "transitive", "def_ar": "ينتقل أثره إلى مفعول به أو أكثر", "types_ar": ["لمفعول واحد", "لمفعولين", "لثلاثة"]},
+            {"id": "mutaadi_lil_majhul", "ar": "مبني للمجهول", "en": "passive", "def_ar": "حُذف فاعله ونُوب عنه بمفعوله", "examples_ar": ["كُتِبَ الدرسُ"]}
+          ],
+          "mahall": [
+            {"id": "mudari_marfu", "ar": "مضارع مرفوع", "en": "indicative", "def_ar": "لعدم وجود ناصب ولا جازم", "sign_ar": "الضمة، أو ثبوت النون في الأفعال الخمسة"},
+            {"id": "mudari_mansub", "ar": "مضارع منصوب", "en": "subjunctive", "def_ar": "بعد أنْ ولنْ وكيْ ولام التعليل وحتى وإذن، والفاء والواو وثمّ وأو السبيبية", "sign_ar": "الفتحة، أو حذف النون في الأفعال الخمسة"},
+            {"id": "mudari_majzum", "ar": "مضارع مجزوم", "en": "jussive", "def_ar": "بعد لم ولمّا ولا الناهية ولام الأمر ولام القسم، وأدوات الشرط الجازمة", "sign_ar": "السكون، أو حذف حرف العلة، أو حذف النون"}
+          ]
+        }
+      },
+      {
+        "id": "harf",
+        "ar": "الحرف",
+        "en": "particle",
+        "def_ar": "كلمة لا يظهر معناها الحقيقي إلا مع غيرها، ولا تقبل علامات الإعراب؛ فهي مبنية دائمًا",
+        "def_en": "A word whose meaning appears only in combination; always indeclinable (mabni) and itself without a grammatical position, but it governs (ya'mal) what follows it.",
+        "facets": {
+          "amal": [
+            {"id": "harf_jarr", "ar": "حرف جر", "en": "preposition", "def_ar": "يجر الاسم الذي بعده", "members_ar": ["من", "إلى", "عن", "على", "في", "الباء", "الكاف", "اللام", "رُبَّ", "حتى", "منذ/مذ"]},
+            {"id": "harf_nasb", "ar": "حرف نصب", "en": "particle making the mudari accusative", "members_ar": ["أنْ", "لنْ", "كيْ", "لام التعليل", "حتى", "إذن", "الفاء والواو وثمّ وأو السبيبية"]},
+            {"id": "harf_jazm", "ar": "حرف جزم", "en": "jussive particle", "members_ar": ["لم", "لمّا (بغير همزة)", "لا الناهية", "لام الأمر", "لام القسم"]},
+            {"id": "adawat_shart_jazima", "ar": "أدوات الشرط الجازمة", "en": "conditional particles (jussive)", "members_ar": ["إنْ", "مَنْ", "ما", "مهما", "متى", "أيّان", "أينما", "أين", "حيثما", "كيفما", "أيّ", "إذما"]},
+            {"id": "harf_tajir_wa_tajzim", "ar": "حروف تجر الاسم وتجزم الفعل", "en": "particles that jar a noun and make a following verb jussive", "members_ar": ["إنّما", "لمّا", "إذما", "لولا", "لوما"]}
+          ],
+          "nawasikh": [
+            {"id": "nawasikh_inna", "ar": "إنّ وأخواتها", "en": "particles of emphasis", "def_ar": "تنصب المبتدأ وترفع الخبر", "members_ar": ["إنّ", "أنّ", "كأنّ", "لكنّ", "ليت", "لعلّ"], "examples_ar": ["إنّ العلمَ نورٌ"]},
+            {"id": "nawasikh_kana", "ar": "كان وأخواتها", "en": "defective verbs", "def_ar": "ترفع المبتدأ وتنصب الخبر", "members_ar": ["كان", "أصبح", "أضحى", "أمسى", "ظلّ", "بات", "صار", "ليس", "ما زال", "ما فتئ", "ما برح", "ما انفكّ", "ما دام"]},
+            {"id": "nawasikh_zann", "ar": "ظنّ وأخواتها", "en": "verbs of estimation", "def_ar": "تنصب المبتدأ والخبر على أنها متعدية لمفعولين", "members_ar": ["ظنّ", "حسِب", "خال", "زعم", "علم", "وجد", "رأى (بمعنى ظنّ)", "درى", "تعلّم"]}
+          ],
+          "dawakhil_bila_amal": [
+            {"id": "dawakhil_la_mahal", "ar": "النواسخ الداخلة على المبتدأ والخبر بلا عمل", "en": "particles entering nominal sentences without governing", "members_ar": ["لولا", "لوما", "لام الابتداء", "لا النافية للجنس", "ما ولام الاستفهام"]}
+          ],
+          "ukhra": [
+            {"id": "huruf_atf", "ar": "حروف العطف", "en": "conjunctions", "members_ar": ["الواو", "الفاء", "ثمّ", "أو", "بل", "لا"]},
+            {"id": "huruf_istithna", "ar": "حروف الاستثناء", "en": "exception particles", "members_ar": ["إلا", "غير", "سوى", "عدا", "خلا", "حاشا"]},
+            {"id": "huruf_nida", "ar": "حروف النداء", "en": "vocative particles", "members_ar": ["يا", "أيا", "هيا", "أ", "وا"]},
+            {"id": "huruf_istifham", "ar": "أدوات الاستفهام", "en": "interrogative words", "members_ar": ["الهمزة (أ)", "هل", "مَن", "ما", "ماذا", "أين", "كيف", "متى", "أيّان", "كم"]}
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,804 @@
+{
+  "meta": {
+    "name_ar": "فهرس العوامل وسلاسل المواضع",
+    "name_en": "Index of awamil (governors) and entry-chains for each position",
+    "version": "1.0.0",
+    "purpose_en": "Every 'aamil in one table: what it governs, with which i'rab effect, its members, and an example. The 'chains' section answers: 'what can come onto this position?' — e.g. onto the mubtada: kana-group (raises it), inna-group (makes it accusative), zann/verbs of hearts (makes it accusative as first object), and the no-op entrants (lolla, lawma, lām al-ibtidā', lā an-nāfiya lil-jins). Sentences in sentences.json carry an \"awamil\" array of these ids, so you can filter the corpus by any 'aamil: python3 nahw/tarkeeb.py awamil <id>",
+    "type_values": {
+      "fil": "عامل لفظي — فعل",
+      "harf": "عامل لفظي — حرف",
+      "manawi": "عامل معنوي",
+      "dawakhil": "داخل بلا عمل (ليس عاملًا)"
+    }
+  },
+  "awamil": [
+    {
+      "id": "fil_lazim",
+      "ar": "الفعل اللازم",
+      "en": "intransitive verb",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "الفاعل",
+          "effect_ar": "رفع",
+          "mahall": "fail"
+        }
+      ],
+      "members_ar": [
+        "نجح",
+        "ذهب",
+        "حضر",
+        "نام",
+        "كل فعل لازم"
+      ],
+      "example_ar": "نجحَ الطالبُ",
+      "notes_ar": [
+        "وقد يكون الفاعل ظاهرًا أو ضميرًا متصلًا أو مستترًا"
+      ]
+    },
+    {
+      "id": "fil_mutaadi",
+      "ar": "الفعل المتعدي لمفعول واحد",
+      "en": "transitive verb (one object)",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "الفاعل",
+          "effect_ar": "رفع",
+          "mahall": "fail"
+        },
+        {
+          "ar": "المفعول به",
+          "effect_ar": "نصب",
+          "mahall": "maful_bih"
+        }
+      ],
+      "members_ar": [
+        "قرأ",
+        "كتب",
+        "خلق",
+        "أهمل",
+        "أكرم",
+        "اشترى"
+      ],
+      "example_ar": "قرأَ الطالبُ الكتابَ"
+    },
+    {
+      "id": "fil_mutaadi_lmafulain",
+      "ar": "الفعل المتعدي لمفعولين (نحو أعطى وأخواتها)",
+      "en": "transitive verb taking two objects (a'taa-group)",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "الفاعل",
+          "effect_ar": "رفع",
+          "mahall": "fail"
+        },
+        {
+          "ar": "المفعول به الأول",
+          "effect_ar": "نصب",
+          "mahall": "maful_bih"
+        },
+        {
+          "ar": "المفعول به الثاني",
+          "effect_ar": "نصب",
+          "mahall": "maful_bih_thani"
+        }
+      ],
+      "members_ar": [
+        "أعطى",
+        "منح",
+        "كسا",
+        "ألبس",
+        "علّم"
+      ],
+      "example_ar": "أعطيتُ الطالبَ كتابًا"
+    },
+    {
+      "id": "fil_majhul",
+      "ar": "الفعل المبني للمجهول",
+      "en": "passive verb",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "نائب الفاعل",
+          "effect_ar": "رفع",
+          "mahall": "naib_fail"
+        }
+      ],
+      "members_ar": [
+        "كُتِبَ",
+        "قُطِعَ",
+        "حُمِلَ",
+        "فُهِمَ"
+      ],
+      "example_ar": "كُتِبَ الدرسُ",
+      "notes_ar": [
+        "حُذف فاعله ونُوب عنه بمفعوله"
+      ]
+    },
+    {
+      "id": "fil_amr",
+      "ar": "فعل الأمر",
+      "en": "imperative verb",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "الفاعل المستتر (أنتَ)",
+          "effect_ar": "مستتر وجوبًا",
+          "mahall": null
+        },
+        {
+          "ar": "المفعول به",
+          "effect_ar": "نصب",
+          "mahall": "maful_bih"
+        }
+      ],
+      "members_ar": [
+        "اقرأْ",
+        "اكتبْ",
+        "اجتهدْ",
+        "أكرمْ"
+      ],
+      "example_ar": "اقرأْ القرآنَ"
+    },
+    {
+      "id": "kana_group",
+      "ar": "كان وأخواتها (الأفعال الناقصة)",
+      "en": "kāna and its sisters (defective verbs)",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "اسمها (المبتدأ)",
+          "effect_ar": "رفع",
+          "mahall": "ism_kana"
+        },
+        {
+          "ar": "خبرها",
+          "effect_ar": "نصب",
+          "mahall": "khabar_kana"
+        }
+      ],
+      "members_ar": [
+        "كان",
+        "أصبح",
+        "أضحى",
+        "أمسى",
+        "ظلّ",
+        "بات",
+        "صار",
+        "ليس",
+        "ما زال",
+        "ما فتئ",
+        "ما برح",
+        "ما انفكّ",
+        "ما دام"
+      ],
+      "example_ar": "كان الطالبُ مجتهدًا"
+    },
+    {
+      "id": "inna_group",
+      "ar": "إنّ وأخواتها (الحروف الناسخة)",
+      "en": "inna and its sisters",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "اسمها (المبتدأ)",
+          "effect_ar": "نصب",
+          "mahall": "ism_inna"
+        },
+        {
+          "ar": "خبرها",
+          "effect_ar": "رفع",
+          "mahall": "khabar_inna"
+        }
+      ],
+      "members_ar": [
+        "إنّ",
+        "أنّ",
+        "كأنّ",
+        "لكنّ",
+        "ليت",
+        "لعلّ"
+      ],
+      "example_ar": "إنّ العلمَ نورٌ",
+      "notes_ar": [
+        "وليت منها للتمني، ولعلّ للترجّي"
+      ]
+    },
+    {
+      "id": "zann_group",
+      "ar": "ظنّ وأفعال القلوب",
+      "en": "ẓanna and the verbs of hearts",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "المبتدأ",
+          "effect_ar": "نصب (مفعول أول)",
+          "mahall": "maful_bih"
+        },
+        {
+          "ar": "الخبر",
+          "effect_ar": "نصب (مفعول ثانٍ)",
+          "mahall": "maful_bih_thani"
+        }
+      ],
+      "members_ar": [
+        "ظنّ",
+        "حسِب",
+        "خال",
+        "زعم",
+        "علم",
+        "وجد",
+        "درى",
+        "تعلّم",
+        "رأى (بمعنى ظنّ)"
+      ],
+      "example_ar": "ظننتُ العلمَ نافعًا",
+      "notes_ar": [
+        "تنصب المبتدأ والخبر على أنها متعدية لمفعولين"
+      ]
+    },
+    {
+      "id": "madh_dhamm",
+      "ar": "أفعال المدح والذم",
+      "en": "verbs of praise and blame",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "الممدوح/المذموم",
+          "effect_ar": "رفع (مبتدأ)",
+          "mahall": "mubtada"
+        }
+      ],
+      "members_ar": [
+        "نِعْمَ",
+        "بئسَ",
+        "حبّذا",
+        "لا حبّذا"
+      ],
+      "example_ar": "نِعْمَ الطالبُ",
+      "notes_ar": [
+        "وخبرها محذوف تقديره «مفضَّلٌ/مذمومٌ»، وقد يأتي الفعل مفردًا أو بضمير شأن"
+      ]
+    },
+    {
+      "id": "tajassum",
+      "ar": "صيغة التعجب (ما أفعلَ / أفعِلْ)",
+      "en": "the marveling form",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "المعجَّب به",
+          "effect_ar": "نصب (مفعول به)",
+          "mahall": "maful_bih"
+        }
+      ],
+      "members_ar": [
+        "ما أجملَ",
+        "أجملْ بِ",
+        "ما أعظُمَ"
+      ],
+      "example_ar": "ما أجملَ العلمَ!"
+    },
+    {
+      "id": "harf_jarr",
+      "ar": "حروف الجر",
+      "en": "prepositions",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الاسم المجرور",
+          "effect_ar": "جر",
+          "mahall": "ism_majrur"
+        }
+      ],
+      "members_ar": [
+        "من",
+        "إلى",
+        "عن",
+        "على",
+        "في",
+        "الباء",
+        "الكاف",
+        "اللام",
+        "رُبَّ",
+        "حتى",
+        "منذ"
+      ],
+      "example_ar": "ذهبتُ إلى المسجدِ"
+    },
+    {
+      "id": "harf_nasb",
+      "ar": "حروف النصب",
+      "en": "particles making the mudari accusative",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الفعل المضارع",
+          "effect_ar": "نصب",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "أنْ",
+        "لنْ",
+        "كيْ",
+        "لام التعليل",
+        "حتى",
+        "إذن",
+        "الفاء والواو وثمّ وأو السبيبية"
+      ],
+      "example_ar": "لن يُهملَ الطالبُ دروسَه"
+    },
+    {
+      "id": "harf_jazm",
+      "ar": "حروف الجزم",
+      "en": "jussive particles",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الفعل المضارع",
+          "effect_ar": "جزم",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "لم",
+        "لمّا",
+        "لا الناهية",
+        "لام الأمر"
+      ],
+      "example_ar": "لم يكتُبِ الطالبُ"
+    },
+    {
+      "id": "adawat_shart",
+      "ar": "أدوات الشرط الجازمة",
+      "en": "conditional particles (jussive)",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "فعل الشرط",
+          "effect_ar": "جزم",
+          "mahall": null
+        },
+        {
+          "ar": "جواب الشرط (غير المقترن بالفاء)",
+          "effect_ar": "جزم",
+          "mahall": "jawab_shart"
+        }
+      ],
+      "members_ar": [
+        "إنْ",
+        "مَنْ",
+        "ما",
+        "مهما",
+        "متى",
+        "أيّان",
+        "أينما",
+        "أين",
+        "حيثما",
+        "كيفما",
+        "أيّ",
+        "إذما"
+      ],
+      "example_ar": "إن تجتهدْ تنجحْ"
+    },
+    {
+      "id": "tajrim_wa_tajzim",
+      "ar": "الحروف التي تجر الاسم وتجزم الفعل",
+      "en": "particles that jar a noun and jussivize a verb",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الاسم بعدها",
+          "effect_ar": "جر",
+          "mahall": "ism_majrur"
+        },
+        {
+          "ar": "الفعل المضارع",
+          "effect_ar": "جزم",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "إنّما",
+        "لمّا",
+        "إذما",
+        "لولا",
+        "لوما"
+      ],
+      "example_ar": "إنما الأعمالُ بالنياتِ (البخاري 1)",
+      "notes_ar": [
+        "شاهد حديثي أول في صحيح البخاري"
+      ]
+    },
+    {
+      "id": "lam_qasam",
+      "ar": "لام القسم",
+      "en": "the oath-lām",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الفعل المضارع",
+          "effect_ar": "جزم",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "لَ (المشدّدة)"
+      ],
+      "example_ar": "واللهِ لأجتهدنَّ",
+      "notes_ar": [
+        "جواب القسم المقترن بها لا محل له من الإعراب"
+      ]
+    },
+    {
+      "id": "harf_nafiya",
+      "ar": "ما النافية (تحذف عمل الفعل)",
+      "en": "negating mā (removes the verb's action)",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "الفعل (يزيل أثره)",
+          "effect_ar": "إزالة العمل",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "ما النافية"
+      ],
+      "example_ar": "ما حضرَ إلا زيدٌ"
+    },
+    {
+      "id": "harf_atf",
+      "ar": "حروف العطف",
+      "en": "conjunctions",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "المعطوف",
+          "effect_ar": "يعطُفه على المتبوع فيتبعه إعرابًا",
+          "mahall": "atf"
+        }
+      ],
+      "members_ar": [
+        "الواو",
+        "الفاء",
+        "ثمّ",
+        "أو",
+        "بل",
+        "لا"
+      ],
+      "example_ar": "جاءَ زيدٌ وعمرٌو"
+    },
+    {
+      "id": "harf_istithna",
+      "ar": "أدوات الاستثناء",
+      "en": "exception particles",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "المستثنى",
+          "effect_ar": "نصب",
+          "mahall": "mustathna"
+        }
+      ],
+      "members_ar": [
+        "إلا",
+        "غير",
+        "سوى",
+        "عدا",
+        "خلا",
+        "حاشا"
+      ],
+      "example_ar": "ما حضرَ إلا زيدٌ"
+    },
+    {
+      "id": "harf_nida",
+      "ar": "حروف النداء",
+      "en": "vocative particles",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "المنادى",
+          "effect_ar": "يبني المفرد والعلم على ما يُرفع به في محل نصب",
+          "mahall": "munada"
+        }
+      ],
+      "members_ar": [
+        "يا",
+        "أيا",
+        "هيا",
+        "أ",
+        "وا"
+      ],
+      "example_ar": "يا محمدُ اجتهدْ"
+    },
+    {
+      "id": "waw_maiyya",
+      "ar": "واو المعية",
+      "en": "waw of accompaniment",
+      "type": "harf",
+      "works_on": [
+        {
+          "ar": "المفعول معه",
+          "effect_ar": "نصب",
+          "mahall": "maful_maahu"
+        }
+      ],
+      "members_ar": [
+        "الواو بعد فعل منفي أو طلب"
+      ],
+      "example_ar": "ما سرتُ وأخاك"
+    },
+    {
+      "id": "idafa",
+      "ar": "الإضافة (المضاف)",
+      "en": "annexation (the mudhaf governs)",
+      "type": "manawi",
+      "works_on": [
+        {
+          "ar": "المضاف إليه",
+          "effect_ar": "جر",
+          "mahall": "mudaf_ilaihi"
+        }
+      ],
+      "members_ar": [
+        "كل اسم مضاف: كتابُ اللهِ، تحتَ الشجرةِ"
+      ],
+      "example_ar": "القرآنُ كتابُ اللهِ",
+      "notes_ar": [
+        "عامل معنوي: لا يظهر له لفظ، ويجب إعراب المضاف إليه جرًّا"
+      ]
+    },
+    {
+      "id": "zarfiyya",
+      "ar": "الظرفية",
+      "en": "adverbial relation",
+      "type": "manawi",
+      "works_on": [
+        {
+          "ar": "شبه الجملة المتعلقة",
+          "effect_ar": "نصب (محل)",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "الظرف (اليومَ، تحتَ)",
+        "الجار والمجرور"
+      ],
+      "example_ar": "الجوُّ جميلٌ اليومَ",
+      "notes_ar": [
+        "عامل معنوي: الشبه جملة متعلقة بعامل لفظي أو محذوف"
+      ]
+    },
+    {
+      "id": "dawakhil_la_mahal",
+      "ar": "الداخلة على المبتدأ والخبر بلا عمل",
+      "en": "no-op entrants on nominal sentences",
+      "type": "dawakhil",
+      "works_on": [
+        {
+          "ar": "لا تعمل — يبقى المبتدأ والخبر على أصلهما",
+          "effect_ar": "لا شيء",
+          "mahall": null
+        }
+      ],
+      "members_ar": [
+        "لولا",
+        "لوما",
+        "لام الابتداء",
+        "لا النافية للجنس",
+        "ما ولام الاستفهام"
+      ],
+      "example_ar": "لا شكَّ في وجودِ اللهِ"
+    },
+    {
+      "id": "afaal_rajaa",
+      "ar": "أفعال الرجاء (عسى وحرى)",
+      "en": "verbs of hope",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "اسمها (المبتدأ)",
+          "effect_ar": "رفع",
+          "mahall": "ism_kana"
+        },
+        {
+          "ar": "خبرها",
+          "effect_ar": "نصب",
+          "mahall": "khabar_kana"
+        }
+      ],
+      "members_ar": [
+        "عسى",
+        "حرى"
+      ],
+      "example_ar": "عَسَىٰ رَبُّكُمْ أَن يَرْحَمَكُمْ (17:24)",
+      "notes_ar": [
+        "تعمل عمل كان — بشروط: ماضية، صحيحة الآخر، مجردة من الهمزة والتضعيف، مبنية للمعلوم، ولا دعاء بعدها"
+      ]
+    },
+    {
+      "id": "afaal_shuruu",
+      "ar": "أفعال الشروع (أخذ وجعل وعلق وهبّ وطوّق)",
+      "en": "inception verbs",
+      "type": "fil",
+      "works_on": [
+        {
+          "ar": "المبتدأ",
+          "effect_ar": "نصب (مفعول أول)",
+          "mahall": "maful_bih"
+        },
+        {
+          "ar": "الخبر (جملة مضارعة)",
+          "effect_ar": "نصب (مفعول ثانٍ)",
+          "mahall": "maful_bih_thani"
+        }
+      ],
+      "members_ar": [
+        "أخذ",
+        "جعل",
+        "علق",
+        "هبّ",
+        "طوّق"
+      ],
+      "example_ar": "أخذَ الطالبُ يقرأُ",
+      "notes_ar": [
+        "تنصب المبتدأ والخبر كظنّ وأخواتها"
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "site_ar": "المبتدأ",
+      "base_ar": "مرفوع (وهو أصل الجملة الاسمية)",
+      "entrants": [
+        {
+          "id": "kana_group",
+          "ar": "كان وأخواتها (الأفعال الناقصة)",
+          "effect_ar": "ترفع المبتدأ فيصير اسم كان، وتنصب الخبر"
+        },
+        {
+          "id": "inna_group",
+          "ar": "إنّ وأخواتها",
+          "effect_ar": "تنصب المبتدأ فيصير اسم إنّ، وترفع الخبر"
+        },
+        {
+          "id": "zann_group",
+          "ar": "ظنّ وأفعال القلوب",
+          "effect_ar": "تنصب المبتدأ والخبر (مفعولان)"
+        },
+        {
+          "id": "dawakhil_la_mahal",
+          "ar": "لولا، لوما، لام الابتداء، لا النافية للجنس، ما ولام الاستفهام",
+          "effect_ar": "تدخل بلا عمل فيبقى المبتدأ والخبر على أصلهما"
+        },
+        {
+          "id": "afaal_rajaa",
+          "ar": "عسى وحرى (الرجاء)",
+          "effect_ar": "ترفع المبتدأ وتنصب الخبر — عمل كان"
+        },
+        {
+          "id": "afaal_shuruu",
+          "ar": "أفعال الشروع (أخذ وجعل...)",
+          "effect_ar": "تنصب المبتدأ والخبر (مفعولان)"
+        }
+      ]
+    },
+    {
+      "site_ar": "الخبر",
+      "base_ar": "مرفوع (مفرد أو جملة أو شبه جملة)",
+      "entrants": [
+        {
+          "id": "kana_group",
+          "ar": "كان وأخواتها",
+          "effect_ar": "تنصبه"
+        },
+        {
+          "id": "inna_group",
+          "ar": "إنّ وأخواتها",
+          "effect_ar": "ترفعه"
+        },
+        {
+          "id": "zann_group",
+          "ar": "ظنّ وأفعال القلوب",
+          "effect_ar": "تنصبه (مفعول ثانٍ)"
+        },
+        {
+          "id": "afaal_rajaa",
+          "ar": "عسى وحرى (الرجاء)",
+          "effect_ar": "تنصبه"
+        },
+        {
+          "id": "afaal_shuruu",
+          "ar": "أفعال الشروع",
+          "effect_ar": "تنصبه (مفعول ثانٍ)"
+        }
+      ]
+    },
+    {
+      "site_ar": "الفعل المضارع",
+      "base_ar": "مرفوع للابتداء (بالضمة أو ثبوت النون)",
+      "entrants": [
+        {
+          "id": "harf_nasb",
+          "ar": "الناصبات",
+          "effect_ar": "تنصبه"
+        },
+        {
+          "id": "harf_jazm",
+          "ar": "الجوازم (لم، لمّا، لا الناهية، لام الأمر)",
+          "effect_ar": "تجزمه"
+        },
+        {
+          "id": "adawat_shart",
+          "ar": "أدوات الشرط الجازمة",
+          "effect_ar": "تجزم فعل الشرط وجوابه"
+        },
+        {
+          "id": "lam_qasam",
+          "ar": "لام القسم",
+          "effect_ar": "تجزمه"
+        },
+        {
+          "id": "tajrim_wa_tajzim",
+          "ar": "إنّما، لمّا، إذما، لولا، لوما",
+          "effect_ar": "تجزمه وتجر الاسم بعدها"
+        }
+      ]
+    },
+    {
+      "site_ar": "الاسم",
+      "base_ar": "مصرف: يُرفع بالضمة ويُنصب بالفتحة ويُجر بالكسرة (أو ما ينوب)",
+      "entrants": [
+        {
+          "id": "fil_lazim",
+          "ar": "الفعل اللازم",
+          "effect_ar": "يرفعه فاعلًا"
+        },
+        {
+          "id": "fil_mutaadi",
+          "ar": "الفعل المتعدي",
+          "effect_ar": "يرفعه فاعلًا وينصبه مفعولًا"
+        },
+        {
+          "id": "fil_mutaadi_lmafulain",
+          "ar": "المتعدي لمفعولين",
+          "effect_ar": "ينصب فيه مفعولين"
+        },
+        {
+          "id": "fil_majhul",
+          "ar": "المبني للمجهول",
+          "effect_ar": "يرفعه نائب فاعل"
+        },
+        {
+          "id": "harf_jarr",
+          "ar": "حروف الجر",
+          "effect_ar": "تجره"
+        },
+        {
+          "id": "idafa",
+          "ar": "الإضافة",
+          "effect_ar": "المضاف يجره (مضاف إليه)"
+        },
+        {
+          "id": "harf_nida",
+          "ar": "حروف النداء",
+          "effect_ar": "تبني المنادى العلم على ما يُرفع به في محل نصب"
+        },
+        {
+          "id": "harf_istithna",
+          "ar": "أدوات الاستثناء",
+          "effect_ar": "تنصب المستثنى"
+        },
+        {
+          "id": "waw_maiyya",
+          "ar": "واو المعية",
+          "effect_ar": "تنصبه مفعولًا معه"
+        }
+      ]
+    }
+  ]
+}
