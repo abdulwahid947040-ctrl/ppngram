@@ -22,8 +22,11 @@ Organized after the classical primers ( الآجُرُّوميّة، الكاف�
 | `roadmap.json` | **خريطة الطريق الكاملة**: 6 مراحل دراسية تربط كل المكونات (مستويات + موضوعات + قواعد + عوامل + جمل)، مع «أسئلة الجملة الستة» التي يثبت الطالب هيكلها في ذهنه لأي جملة |
 | `report.md` | الأدلة والقواعد: إحصاء كامل + جدول كل قاعدة بدليلها وبابها من الآجرومية |
 | `topics/` | **الوحدات الموضوعية (10 وحدات، 29 موضوعًا)**: كل نوع جملة بمبنيه وشروطه وضوابطه وإعرابه التفصيلي ووجوه إعرابه وكيف يدخل في جملة أكبر + شواهد من القرآن والسنة + **تمثيلات من الحياة الطبيعية** للمواضع الصعبة — انظر `topics/_index.json` |
-| `tarkeeb.py` | Tool: `validate`, `parse`, `corpus`, `test`, `awamil`, `rules`, `roadmap`, `quiz` |
+| `tarkeeb.py` | Tool: `validate`, `parse`, `corpus`, `test`, `awamil`, `rules`, `roadmap`, `quiz`, `shahid` |
 | `templates/collection_template.csv` | One-row-per-word sheet for collecting your own tarkeeb data |
+| `mine_sources.py` + `mining/` | **اپلوڈ شدہ کتابوں کا مکمل کنخانہ**: ۱۳۴ آیت-اقتباسات + ۷۹۴ احادیث/نثر اقتباسات — ہر ایک کتاب، فصل اور سطر نمبر کے ساتھ۔ تلاش: `tarkeeb.py shahid <لفظ>` |
+| `urdu/rahnuma.md` | **آسان اردو میں مکمل رہنما** — چھ سوال، تصورات، علامتیں، ۱۰ تمثیلات، ۲۸ قواعد کے ادلہ، مشق کا طریقہ |
+| `walkthrough.md` | كيف تُفكِّر في أي جملة — applying the six questions step by step |
 
 ## العوامل والفلتر (awamil.json)
 

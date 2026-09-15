@@ -1243,6 +1243,28 @@ def cmd_quiz():
     return 0
 
 
+# ----------------------------------------------------------------------- shahid
+def cmd_shahid(keyword):
+    key = strip_marks(keyword)
+    results = []
+    for name, label in (("quranic_shawahid.json", "قرآن"), ("hadith_shawahid.json", "حدیث/نثر")):
+        p = HERE / "mining" / name
+        if not p.exists():
+            continue
+        with open(p, encoding="utf-8") as f:
+            vault = json.load(f)
+        for s in vault["shawahid"]:
+            if key in strip_marks(s["quote_ar"]):
+                results.append((label, s))
+    print("تلاش «%s» — %d شواہد ملے:" % (keyword, len(results)))
+    for label, s in results[:20]:
+        print("  [%s | %s | سطر %s]" % (label, s.get("heading") or "—", s.get("line")))
+        print("    %s" % s["quote_ar"][:110])
+    if len(results) > 20:
+        print("  … اور %d مزید" % (len(results) - 20))
+    return 0
+
+
 def main(argv):
     args = [a for a in argv[1:] if a != "--json"]
     as_json = "--json" in argv
@@ -1271,6 +1293,11 @@ def main(argv):
         return cmd_roadmap()
     if cmd == "quiz":
         return cmd_quiz()
+    if cmd == "shahid":
+        if not rest:
+            print("usage: tarkeeb.py shahid <لفظ>")
+            return 2
+        return cmd_shahid(rest[0])
     print("unknown command:", cmd)
     return 2
 
